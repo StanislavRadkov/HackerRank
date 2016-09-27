@@ -28,11 +28,16 @@ namespace Stacks
                 }
                 else
                 {
-                    if (stack.Count > 0 && Array.IndexOf(closingBrackets, bracket) != Array.IndexOf(openingBrackets, stack.Pop()))
-                    {
+                    if (stack.Count == 0 || 
+                        (stack.Count > 0 && Array.IndexOf(closingBrackets, bracket) != Array.IndexOf(openingBrackets, stack.Pop()))) {
                         return false;
                     }
                 }
+            }
+
+            if (stack.Count > 0)
+            {
+                return false;
             }
 
             return true;

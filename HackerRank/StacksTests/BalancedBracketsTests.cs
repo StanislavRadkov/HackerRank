@@ -54,5 +54,23 @@ namespace StacksTests
         {
             Assert.AreEqual(BalancedBrackets.ValiedateBrackets("{)[](}]}]}))}(())("), false);
         }
+
+        [TestMethod]
+        public void TestMethod9()
+        {
+            Assert.AreEqual(BalancedBrackets.ValiedateBrackets("((("), false);
+        }
+
+        [TestMethod]
+        public void TestMethod10()
+        {
+            Assert.AreEqual(BalancedBrackets.ValiedateBrackets(""), true);
+        }
+
+        [TestMethod]
+        public void TestMethod11()
+        {
+            Assert.AreEqual(BalancedBrackets.ValiedateBrackets(")))"), false);
+        }
     }
 }
