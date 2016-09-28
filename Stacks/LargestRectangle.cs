@@ -4,7 +4,7 @@ using System.Numerics;
 
 namespace Stacks
 {
-    /// https://www.hackerrank.com/challenges/largest-rectangle
+    // https://www.hackerrank.com/challenges/largest-rectangle
     public static class LargestRectangle
     {
         public static BigInteger Solve(int[] buildings)

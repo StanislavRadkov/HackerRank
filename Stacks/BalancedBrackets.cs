@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Stacks
 {
-    /// https://www.hackerrank.com/challenges/balanced-brackets
+    // https://www.hackerrank.com/challenges/balanced-brackets
     public static class BalancedBrackets
     {
         public static bool ValiedateBrackets(string input)

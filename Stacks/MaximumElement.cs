@@ -2,7 +2,7 @@
 
 namespace Stacks
 {
-    /// https://www.hackerrank.com/challenges/maximum-element
+    // https://www.hackerrank.com/challenges/maximum-element
     public class MaximumElement
     {
         private Stack<int> stack;
