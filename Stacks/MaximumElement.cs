@@ -5,13 +5,13 @@ namespace Stacks
     // https://www.hackerrank.com/challenges/maximum-element
     public class MaximumElement
     {
-        private Stack<int> stack;
-        private Stack<int> maxStack;
+        private Stack<int> _stack;
+        private Stack<int> _maxStack;
 
         public MaximumElement()
         {
-            stack = new Stack<int>();
-            maxStack = new Stack<int>();
+            _stack = new Stack<int>();
+            _maxStack = new Stack<int>();
         }
         
         public int? Parse(int[] query)
@@ -19,23 +19,23 @@ namespace Stacks
             switch (query[0])
             {
                 case 1:
-                    stack.Push(query[1]);
-                    if (maxStack.Count == 0 || (maxStack.Count > 0 && query[1] >= maxStack.Peek()))
+                    _stack.Push(query[1]);
+                    if (_maxStack.Count == 0 || (_maxStack.Count > 0 && query[1] >= _maxStack.Peek()))
                     {
-                        maxStack.Push(query[1]);
+                        _maxStack.Push(query[1]);
                     }
                     break;
 
                 case 2:
-                    var value = stack.Pop();
-                    if (value == maxStack.Peek())
+                    var value = _stack.Pop();
+                    if (value == _maxStack.Peek())
                     {
-                        maxStack.Pop();
+                        _maxStack.Pop();
                     }
                     break;
 
                 case 3:
-                    return maxStack.Peek();
+                    return _maxStack.Peek();
             }
 
             return null;

@@ -26,54 +26,54 @@ namespace Stacks
             public String Value { get; set; }
         }
 
-        private StringBuilder text;
-        private Stack<Operation> operations;
+        private StringBuilder _text;
+        private Stack<Operation> _operations;
 
         public SimpleTextEditor()
         {
-            text = new StringBuilder(1024 * 1024);
-            operations = new Stack<Operation>();
+            _text = new StringBuilder(1024 * 1024);
+            _operations = new Stack<Operation>();
         }
 
         public void Append(string s)
         {
             
-            operations.Push(new Operation(s, Type.Addition));
+            _operations.Push(new Operation(s, Type.Addition));
             
             _append(s);
         }
 
         private void _append(string s)
         {
-            text.Append(s);
+            _text.Append(s);
         }
 
         public void Delete(int k)
         {
-            var value = text.ToString(text.Length - k, k);
-            operations.Push(new Operation(value, Type.Deletion));
+            var value = _text.ToString(_text.Length - k, k);
+            _operations.Push(new Operation(value, Type.Deletion));
             
             _delete(k);
         }
 
         private void _delete(int k)
         {
-            text.Remove(text.Length - k, k);
+            _text.Remove(_text.Length - k, k);
         }
 
         public char Print(int k)
         {
-            return text[k-1];
+            return _text[k-1];
         }
 
         public void Undo()
         {
-            if (!operations.Any())
+            if (!_operations.Any())
             {
                 return;
             }
 
-            var last = operations.Pop();
+            var last = _operations.Pop();
 
             switch (last.Type)
             {
