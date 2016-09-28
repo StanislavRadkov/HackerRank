@@ -8,17 +8,11 @@ namespace StacksTests
     [TestClass]
     public class MaximumElementTests
     {
-        private MaximumElement element;
-
-        [TestInitialize]
-        public void Initialize()
-        {
-            element = new MaximumElement();
-        }
-
         [TestMethod]
         public void Test1()
         {
+            var element = new MaximumElement();
+
             var queries = new[]
                 {
                     new int[] {1, 97},
