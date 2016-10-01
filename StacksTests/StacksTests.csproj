@@ -56,6 +56,7 @@
     <Compile Include="BalancedBracketsTests.cs" />
     <Compile Include="LargestRectangleTests.cs" />
     <Compile Include="SimpleTextEditorTests.cs" />
+    <Compile Include="EqualStacksTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stacks\Stacks.csproj">

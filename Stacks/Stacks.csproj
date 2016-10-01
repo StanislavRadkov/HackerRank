@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BalancedBrackets.cs" />
+    <Compile Include="EqualStacks.cs" />
     <Compile Include="LargestRectangle.cs" />
     <Compile Include="MaximumElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
