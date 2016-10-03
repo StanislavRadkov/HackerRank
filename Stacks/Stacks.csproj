@@ -50,6 +50,7 @@
     <Compile Include="EqualStacks.cs" />
     <Compile Include="LargestRectangle.cs" />
     <Compile Include="MaximumElement.cs" />
+    <Compile Include="PoisonousPlants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleTextEditor.cs" />
   </ItemGroup>

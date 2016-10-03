@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace Stacks
 {
+    // https://www.hackerrank.com/challenges/equal-stacks
     public static class EqualStacks
     {
         private class SumStack
