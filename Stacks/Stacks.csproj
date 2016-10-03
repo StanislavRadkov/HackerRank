@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ANDxorOR.cs" />
     <Compile Include="BalancedBrackets.cs" />
     <Compile Include="EqualStacks.cs" />
     <Compile Include="LargestRectangle.cs" />

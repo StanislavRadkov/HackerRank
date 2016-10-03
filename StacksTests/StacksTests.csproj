@@ -57,6 +57,7 @@
     <Compile Include="LargestRectangleTests.cs" />
     <Compile Include="SimpleTextEditorTests.cs" />
     <Compile Include="EqualStacksTests.cs" />
+    <Compile Include="ANDxorORTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stacks\Stacks.csproj">
