@@ -8,37 +8,30 @@ namespace Stacks
     {
         public static int Solve(List<int> data)
         {
-            Func<int, int, int> calc = (m1, m2) => ((m1 & m2) ^ (m1 | m2)) & (m1 ^ m2);
-
             var maxValue = 0;
+            var stack = new Stack<int>(data.Count);
 
-            for (var i = 0; i < data.Count - 1; i++)
+            foreach (var i in data)
             {
-                for (var k = i + 1; k < data.Count; k++)
+                while (stack.Count > 0)
                 {
-                    int? a = null;
-                    int? b = null;
-
-                    for (var j = i; j <= k; j++)
-                    {
-                        if (b == null || data[j] < b)
-                        {
-                            a = b;
-                            b = data[j];
-                        }
-                        else if (a == null || data[j] < a)
-                        {
-                            a = data[j];
-                        }
-                    }
-
-                    var value = calc(a.Value, b.Value);
-
+                    var value = i ^ stack.Peek();
                     if (value > maxValue)
                     {
                         maxValue = value;
                     }
+
+                    if (i < stack.Peek())
+                    {
+                        stack.Pop();
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
+
+                stack.Push(i);
             }
 
             return maxValue;
