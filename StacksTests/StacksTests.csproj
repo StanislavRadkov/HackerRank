@@ -61,6 +61,7 @@
     <Compile Include="EqualStacksTests.cs" />
     <Compile Include="PoisonousPlantsTests.cs" />
     <Compile Include="ANDxorORTests.cs" />
+    <Compile Include="WaiterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stacks\Stacks.csproj">

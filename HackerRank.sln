@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stacks", "Stacks\Stacks.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StacksTests", "StacksTests\StacksTests.csproj", "{805A64E1-DEE1-4335-A6A7-0A08669E8BF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{BB5DD39E-42F0-4D67-B8E4-119B259F57CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{805A64E1-DEE1-4335-A6A7-0A08669E8BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{805A64E1-DEE1-4335-A6A7-0A08669E8BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{805A64E1-DEE1-4335-A6A7-0A08669E8BF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB5DD39E-42F0-4D67-B8E4-119B259F57CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5DD39E-42F0-4D67-B8E4-119B259F57CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5DD39E-42F0-4D67-B8E4-119B259F57CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5DD39E-42F0-4D67-B8E4-119B259F57CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
