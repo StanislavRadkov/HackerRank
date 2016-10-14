@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StacksTests", "StacksTests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{BB5DD39E-42F0-4D67-B8E4-119B259F57CE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithms", "Algorithms", "{9E5A3601-0384-423F-AE00-01DF2163D7CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementation", "Implementation\Implementation.csproj", "{A27B35D5-A661-484A-8BA1-F50FDA278E6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementationTests", "ImplementationTests\ImplementationTests.csproj", "{EFD828A8-042B-4D35-8C75-DD01A6FCBEF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,14 @@ Global
 		{BB5DD39E-42F0-4D67-B8E4-119B259F57CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB5DD39E-42F0-4D67-B8E4-119B259F57CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB5DD39E-42F0-4D67-B8E4-119B259F57CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27B35D5-A661-484A-8BA1-F50FDA278E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27B35D5-A661-484A-8BA1-F50FDA278E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27B35D5-A661-484A-8BA1-F50FDA278E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27B35D5-A661-484A-8BA1-F50FDA278E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD828A8-042B-4D35-8C75-DD01A6FCBEF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD828A8-042B-4D35-8C75-DD01A6FCBEF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD828A8-042B-4D35-8C75-DD01A6FCBEF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD828A8-042B-4D35-8C75-DD01A6FCBEF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,5 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{83FADE50-0643-4634-82FE-60F1DA819843} = {21EDE635-8C95-4EF0-9349-CD5BC06C7EA2}
 		{805A64E1-DEE1-4335-A6A7-0A08669E8BF3} = {21EDE635-8C95-4EF0-9349-CD5BC06C7EA2}
+		{A27B35D5-A661-484A-8BA1-F50FDA278E6C} = {9E5A3601-0384-423F-AE00-01DF2163D7CC}
+		{EFD828A8-042B-4D35-8C75-DD01A6FCBEF9} = {9E5A3601-0384-423F-AE00-01DF2163D7CC}
 	EndGlobalSection
 EndGlobal
