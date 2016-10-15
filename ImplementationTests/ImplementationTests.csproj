@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="KangarooTests.cs" />
+    <Compile Include="DivisibleSusmPairsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Implementation\Implementation.csproj">

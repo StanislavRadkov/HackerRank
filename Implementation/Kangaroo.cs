@@ -1,5 +1,6 @@
 ﻿namespace Implementation
 {
+    // https://www.hackerrank.com/challenges/kangaroo
     public static class Kangaroo
     {
         public static bool Solve(int x1, int v1, int x2, int v2)
