@@ -54,8 +54,9 @@
     <Compile Include="KangarooTests.cs" />
     <Compile Include="DivisibleSusmPairsTest.cs" />
     <Compile Include="AngryProfessorTests.cs" />
-	<Compile Include="CutTheSticksTests.cs" />
+    <Compile Include="CutTheSticksTests.cs" />
     <Compile Include="SockMerchantTests.cs" />
+    <Compile Include="RepeatedStringTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Implementation\Implementation.csproj">
