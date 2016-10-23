@@ -58,6 +58,7 @@
     <Compile Include="SockMerchantTests.cs" />
     <Compile Include="RepeatedStringTests.cs" />
     <Compile Include="JumpingOnTheCloudsTests.cs" />
+    <Compile Include="StrangeCounterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Implementation\Implementation.csproj">
