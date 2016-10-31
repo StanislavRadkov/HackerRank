@@ -53,6 +53,12 @@
     <Compile Include="LonelyIntegerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BitManipulation\BitManipulation.csproj">
+      <Project>{8f7eddbe-065f-4561-a495-40b043ba89d3}</Project>
+      <Name>BitManipulation</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

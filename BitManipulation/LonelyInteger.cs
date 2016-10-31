@@ -11,7 +11,14 @@ namespace BitManipulation
     {
         public static int Solve(int[] input)
         {
-            throw new NotImplementedException();
+            var unique = 0;
+
+            foreach (var i in input)
+            {
+                unique ^= i;
+            }
+
+            return unique;
         }
     }
 }
