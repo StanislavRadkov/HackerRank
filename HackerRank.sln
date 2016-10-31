@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataStructures", "DataStructures", "{21EDE635-8C95-4EF0-9349-CD5BC06C7EA2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stacks", "Stacks\Stacks.csproj", "{83FADE50-0643-4634-82FE-60F1DA819843}"
@@ -14,6 +16,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementation", "Implementation\Implementation.csproj", "{A27B35D5-A661-484A-8BA1-F50FDA278E6C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementationTests", "ImplementationTests\ImplementationTests.csproj", "{EFD828A8-042B-4D35-8C75-DD01A6FCBEF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitManipulation", "BitManipulation\BitManipulation.csproj", "{8F7EDDBE-065F-4561-A495-40B043BA89D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitManipulationTests", "BitManipulationTests\BitManipulationTests.csproj", "{C9D0E8DD-42CC-40A2-8922-3836600E8A82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +47,14 @@ Global
 		{EFD828A8-042B-4D35-8C75-DD01A6FCBEF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFD828A8-042B-4D35-8C75-DD01A6FCBEF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFD828A8-042B-4D35-8C75-DD01A6FCBEF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F7EDDBE-065F-4561-A495-40B043BA89D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F7EDDBE-065F-4561-A495-40B043BA89D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F7EDDBE-065F-4561-A495-40B043BA89D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F7EDDBE-065F-4561-A495-40B043BA89D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9D0E8DD-42CC-40A2-8922-3836600E8A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D0E8DD-42CC-40A2-8922-3836600E8A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D0E8DD-42CC-40A2-8922-3836600E8A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D0E8DD-42CC-40A2-8922-3836600E8A82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +64,7 @@ Global
 		{805A64E1-DEE1-4335-A6A7-0A08669E8BF3} = {21EDE635-8C95-4EF0-9349-CD5BC06C7EA2}
 		{A27B35D5-A661-484A-8BA1-F50FDA278E6C} = {9E5A3601-0384-423F-AE00-01DF2163D7CC}
 		{EFD828A8-042B-4D35-8C75-DD01A6FCBEF9} = {9E5A3601-0384-423F-AE00-01DF2163D7CC}
+		{8F7EDDBE-065F-4561-A495-40B043BA89D3} = {9E5A3601-0384-423F-AE00-01DF2163D7CC}
+		{C9D0E8DD-42CC-40A2-8922-3836600E8A82} = {9E5A3601-0384-423F-AE00-01DF2163D7CC}
 	EndGlobalSection
 EndGlobal
