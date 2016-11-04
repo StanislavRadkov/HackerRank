@@ -56,6 +56,7 @@
     <Compile Include="MaximizingXORTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SumvsXORTests.cs" />
+    <Compile Include="CounterGameTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BitManipulation\BitManipulation.csproj">
