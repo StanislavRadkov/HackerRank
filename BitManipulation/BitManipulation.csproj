@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CounterGame.cs" />
+    <Compile Include="FlippingBits.cs" />
     <Compile Include="LonelyInteger.cs" />
     <Compile Include="MaximizingXOR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
