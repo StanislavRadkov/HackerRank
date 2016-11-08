@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BitManipulation
+﻿namespace BitManipulation
 {
+    // https://www.hackerrank.com/challenges/flipping-bits
     public static class FlippingBits
     {
         public static uint[] Solve(uint[] input)
