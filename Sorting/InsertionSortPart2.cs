@@ -21,7 +21,7 @@ namespace Sorting
                     data[j + 1] = data[j];
                     j--;
                 }
-
+                
                 data[j + 1] = x;
 
                 int[] result = new int[data.Length];
