@@ -13,20 +13,19 @@ namespace Sorting
         {
             for (var i = 1; i < data.Length; i++)
             {
-                var x = data[i];
+                var value = data[i];
                 var j = i - 1;
 
-                while (j >= 0 && data[j] > x)
+                while (j >= 0 && data[j] > value)
                 {
                     data[j + 1] = data[j];
                     j--;
                 }
                 
-                data[j + 1] = x;
+                data[j + 1] = value;
 
-                int[] result = new int[data.Length];
+                var result = new int[data.Length];
                 Array.Copy(data, result, data.Length);
-
                 yield return result;
             }
         }
