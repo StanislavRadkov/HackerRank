@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sorting
 {
     // https://www.hackerrank.com/challenges/insertionsort2
     public static class InsertionSortPart2
     {
-        public static IEnumerable<int[]> Sort(int[] data)
+        public static IEnumerable<int[]> Sort(int[] data, Action<int> swap = null)
         {
             for (var i = 1; i < data.Length; i++)
             {
@@ -19,6 +16,11 @@ namespace Sorting
                 while (j >= 0 && data[j] > value)
                 {
                     data[j + 1] = data[j];
+
+                    #region Debug Code
+                    swap?.Invoke(data[j]);
+                    #endregion
+
                     j--;
                 }
                 
