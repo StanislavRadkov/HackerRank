@@ -2,7 +2,7 @@
 
 namespace Sorting
 {
-    // https://www.hackerrank.com/challenges/quicksort2
+    // https://www.hackerrank.com/challenges/quicksort1
     public static class Quicksort1Partition
     {
         public static List<int> Partion(int[] data)
