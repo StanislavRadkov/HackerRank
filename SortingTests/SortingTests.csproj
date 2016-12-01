@@ -56,6 +56,7 @@
     <Compile Include="IntroToTutorialChallengesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RunningTimeOfAlgorithmsTests.cs" />
+    <Compile Include="Quicksort1PartitionTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sorting\Sorting.csproj">
