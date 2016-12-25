@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="AngryProfessor.cs" />
     <Compile Include="CutTheSticks.cs" />
+    <Compile Include="DesignerPDFViewer.cs" />
     <Compile Include="DivisibleSumPairs.cs" />
     <Compile Include="JumpingOnTheClouds.cs" />
     <Compile Include="Kangaroo.cs" />
