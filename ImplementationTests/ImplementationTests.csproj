@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AppendAndDeleteTests.cs" />
     <Compile Include="DesignerPDFViewerTests.cs" />
     <Compile Include="MiniMaxSumTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AngryProfessor.cs" />
+    <Compile Include="AppendAndDelete.cs" />
     <Compile Include="CutTheSticks.cs" />
     <Compile Include="DesignerPDFViewer.cs" />
     <Compile Include="DivisibleSumPairs.cs" />
