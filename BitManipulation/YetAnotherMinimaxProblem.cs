@@ -32,15 +32,17 @@ namespace BitManipulationTests
 
             msb1.Sort();
             msb0.Sort();
-
+            var min = int.MaxValue;
             for (var i = 0; i < msb1.Count; i++)
             {
                 for (var j = 0; j < msb0.Count; j++)
                 {
-                    if ((msb1[i] ^ msb0[j]) == 32772)
+                    if (min > (msb1[i] ^ msb0[j]))
                     {
-                        break;
+                        min = (msb1[i] ^ msb0[j]);
+
                     }
+
                 }
             }
 
