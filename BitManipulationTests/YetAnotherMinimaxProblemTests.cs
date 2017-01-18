@@ -26,5 +26,23 @@ namespace BitManipulationTests
         {
             Assert.AreEqual(2, YetAnotherMinimaxProblem.Get(new int[] { 1, 2, 3 }));
         }
+
+        [TestMethod]
+        public void TestMethod4()
+        {
+            Assert.AreEqual(4, YetAnotherMinimaxProblem.Get(new int[] { 12, 8, 9, 11, 14 }));
+        }
+
+        [TestMethod]
+        public void TestMethod5()
+        {
+            Assert.AreEqual(4, YetAnotherMinimaxProblem.Get(new int[] { 12, 8, 9, 11, 14 }));
+        }
+
+        [TestMethod]
+        public void TestMethod6()
+        {
+            Assert.AreEqual(0, YetAnotherMinimaxProblem.Get(new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }));
+        }
     }
 }

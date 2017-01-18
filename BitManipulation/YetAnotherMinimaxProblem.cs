@@ -16,17 +16,23 @@ namespace BitManipulationTests
 
             var positionOfMSB = data.Select(x => Utils.GetMSB(x)).Max();
 
-            int msb = 1 << positionOfMSB;
-
-            foreach (var n in data)
+            for (; positionOfMSB >= 0 && (msb1.Count == 0 || msb0.Count == 0); positionOfMSB--)
             {
-                if ((msb & n) != 0)
+                int msb = 1 << positionOfMSB;
+
+                msb1.Clear();
+                msb0.Clear();
+
+                foreach (var n in data)
                 {
-                    msb1.Add(n);
-                }
-                else
-                {
-                    msb0.Add(n);
+                    if ((msb & n) != 0)
+                    {
+                        msb1.Add(n);
+                    }
+                    else
+                    {
+                        msb0.Add(n);
+                    }
                 }
             }
 
@@ -40,19 +46,12 @@ namespace BitManipulationTests
                     if (min > (msb1[i] ^ msb0[j]))
                     {
                         min = (msb1[i] ^ msb0[j]);
-
                     }
 
                 }
             }
 
-            var a = msb1.Last();
-            var b = msb0.Last();
-
-            var c = msb1.First();
-            var d = msb0.First();
-
-            return Math.Min(a ^ b, c ^ d);
+            return min == int.MaxValue ? 0 : min;
         }
     }
 }
