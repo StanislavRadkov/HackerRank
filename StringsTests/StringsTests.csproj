@@ -55,6 +55,7 @@
     <Compile Include="SuperReducedStringTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CamelcaseTests.cs" />
+    <Compile Include="RichieRichTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Strings\Strings.csproj">
