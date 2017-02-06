@@ -86,6 +86,34 @@ namespace CrackingTheCodingInterviewTests
                 new []{15, 11, 7, 3},
                 new []{16, 12, 8, 4}
             };
+
+            for (var row = 0; row < matrix.Length; row++)
+            {
+                CollectionAssert.AreEqual(expected[row], matrix[row]);
+            }
+        }
+
+        [TestMethod]
+        public void SetRowAndColumnToZeroTests()
+        {
+            var matrix = new int[][]
+           {
+                new []{1, 2, 3, 4},
+                new []{5, 6, 7, 8},
+                new []{9, 0, 11, 12},
+                new []{13, 14, 15, 0}
+           };
+
+            ArrayAndStrings.SetRowAndColumnToZero(matrix);
+
+            var expected = new int[][]
+            {
+                new []{1, 0, 3, 0},
+                new []{5, 0, 7, 0},
+                new []{0, 0, 0, 0},
+                new []{0, 0, 0, 0}
+            };
+
             for (var row = 0; row < matrix.Length; row++)
             {
                 CollectionAssert.AreEqual(expected[row], matrix[row]);

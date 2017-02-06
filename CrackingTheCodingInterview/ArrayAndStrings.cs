@@ -126,5 +126,34 @@ namespace CrackingTheCodingInterview
                 }
             }
         }
+
+        public static void SetRowAndColumnToZero(int[][] matrix)
+        {
+            var rows = new bool[matrix.Length];
+            var columns = new bool[matrix[0].Length];
+
+            for (var row = 0; row < rows.Length; row++)
+            {
+                for (var column = 0; column < columns.Length; column++)
+                {
+                    if (matrix[row][column] == 0)
+                    {
+                        rows[row] = true;
+                        columns[column] = true;
+                    }
+                }
+            }
+
+            for (var row = 0; row < rows.Length; row++)
+            {
+                for (var column = 0; column < columns.Length; column++)
+                {
+                    if (rows[row] || columns[column])
+                    {
+                        matrix[row][column] = 0;
+                    }
+                }
+            }
+        }
     }
 }

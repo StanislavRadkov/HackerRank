@@ -45,8 +45,6 @@ namespace DynamicProgramming
                 }
             }
 
-            var lis = GetLongestIncreasingSubsequence(values, from, results[length]);
-
             return length + 1;
         }
 
