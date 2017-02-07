@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ArrayAndStringsTests.cs" />
+    <Compile Include="LinkedListsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CrackingTheCodingInterview\CrackingTheCodingInterview.csproj">
