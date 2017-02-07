@@ -155,5 +155,12 @@ namespace CrackingTheCodingInterview
                 }
             }
         }
+
+        public static bool IsRotation(string a, string b)
+        {
+            var aa = a + a;
+
+            return aa.IndexOf(b) >= 0;
+        } 
     }
 }

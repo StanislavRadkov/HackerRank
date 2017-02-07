@@ -119,5 +119,11 @@ namespace CrackingTheCodingInterviewTests
                 CollectionAssert.AreEqual(expected[row], matrix[row]);
             }
         }
+
+        [TestMethod]
+        public void IsRotationTests()
+        {
+            Assert.AreEqual(true, ArrayAndStrings.IsRotation("erbottlewat", "waterbottle"));
+        }
     }
 }
