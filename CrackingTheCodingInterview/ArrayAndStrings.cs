@@ -8,6 +8,8 @@ namespace CrackingTheCodingInterview
 {
     public static class ArrayAndStrings
     {
+        /* Implement an algorithm to determine if a string has all unique characters. What if
+         * you cannot use additional data structures? */
         public static bool AllUniqueCharactersASCII(string a)
         {
             var chars = new bool[256];
@@ -24,7 +26,7 @@ namespace CrackingTheCodingInterview
 
             return true;
         }
-
+        
         public static bool AllUniqueCharactersUnicode(string a)
         {
             var hashSet = new HashSet<char>();
@@ -42,6 +44,8 @@ namespace CrackingTheCodingInterview
             return true;
         }
 
+        /* Implement a function void reversefchar* str) in Cor C++ which reverses a null-terminated 
+         * string. */
         public static string ReverseString(string a)
         {
             var input = a.ToCharArray();
@@ -57,6 +61,7 @@ namespace CrackingTheCodingInterview
             return String.Join(String.Empty, input);
         }
 
+        /* Given two strings, write a method to decide if one is a permutation of the other. */
         public static bool IsPermutation(string a, string b)
         {
             if (a.Length != b.Length)
@@ -81,11 +86,19 @@ namespace CrackingTheCodingInterview
             return true;
         }
 
+        /*Write a method to replace all spaces in a string with '%20'. You may assume that the 
+         * string has sufficient space at the end of the string to hold the additional characters, 
+         * and that you are given the "true" length of the string. (Note: if implementing in Java, 
+         * please use a character array so that you can perform this operation in place.) */
         public static string ReplaceSpaces(string a)
         {
             return a.Trim().Replace(" ", "%20");
         }
 
+        /* Implement a method to perform basic string compression using the counts of 
+         * repeated characters. For example, the string aabcccccaaa would become 
+         * a2blc5a3. If the "compressed" string would not become smaller than the original 
+         * string, your method should return the original string */
         public static string CompressString(string a)
         {
             var sb = new StringBuilder(a.Length);
@@ -105,6 +118,8 @@ namespace CrackingTheCodingInterview
             return sb.Length < a.Length ? sb.ToString() : a;
         }
 
+        /* Given an image represented by an NxN matrix, where each pixel in the image is 4 
+         * bytes, write a method to rotate the image by 90 degrees. Can you do this in place? */
         public static void RotateMatrix(int[][] matrix)
         {
             var n = matrix.Length;
@@ -127,6 +142,8 @@ namespace CrackingTheCodingInterview
             }
         }
 
+        /* Write an algorithm such that if an element in an MxN matrix is 0, its entire row and 
+         * column are set to 0. */
         public static void SetRowAndColumnToZero(int[][] matrix)
         {
             var rows = new bool[matrix.Length];
@@ -156,6 +173,9 @@ namespace CrackingTheCodingInterview
             }
         }
 
+        /* Assume you have a method isSubstring which checks if one word is a substring 
+         * of another. Given two strings, si and s2, write code to check Ifs2 is a rotation of si 
+         * using only onecalltoisSubstring (e.g., "waterbottLe" is a rotation of "erbottLewat"). */
         public static bool IsRotation(string a, string b)
         {
             var aa = a + a;
