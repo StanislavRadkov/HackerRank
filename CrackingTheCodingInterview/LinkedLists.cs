@@ -41,5 +41,37 @@ namespace CrackingTheCodingInterview
 
             return head;
         }
+
+        public static ListNode<int> RemoveDuplicatesNoBuffer(ListNode<int> head)
+        {
+            if (head == null)
+            {
+                return null;
+            }
+
+            var node = head;
+            ListNode<int> previous = null;
+
+            while (node != null)
+            {
+                var runner = node;
+                while(runner.Next != null)
+                {
+                    if (runner.Next.Value == node.Value)
+                    {
+                        runner.Next = runner.Next.Next;
+                    }
+                    else
+                    {
+                        runner = runner.Next;
+                    }
+                }
+
+                node = node.Next;
+
+            } while (node != null) ;
+
+            return head;
+        }
     }
 }
