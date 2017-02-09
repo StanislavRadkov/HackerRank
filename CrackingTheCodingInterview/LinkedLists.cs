@@ -73,5 +73,107 @@ namespace CrackingTheCodingInterview
 
             return head;
         }
+
+        /* Implement an algorithm to find the kth to last element of a singly linked list */
+        public static int GetNthToLastRecursive(ListNode<int> head, ref int? element, int k)
+        {
+            if (head == null)
+            {
+                return 0;
+            }
+
+            var i = GetNthToLastRecursive(head.Next, ref element, k) + 1;
+
+            if (i == k)
+            {
+                element = head.Value;
+            }
+
+            return i;
+        }
+
+        public static ListNode<int> GetNthToLastIterative(ListNode<int> head, int k)
+        {
+            var p1 = head;
+            var p2 = head;
+
+            for (var i = 0; i < k - 1; i++)
+            {
+                p2 = p2.Next;
+                if (p2 == null) return null;
+            }
+
+            while (p2.Next != null)
+            {
+                p1 = p1.Next;
+                p2 = p2.Next;
+            }
+
+            return p1;
+        }
+
+        /* Implementan algorithm to delete a node in the middle of a singly linked list, given 
+         * only access to that node */
+        public static void RemoveNode(ListNode<int> node)
+        {
+            if (node.Next == null)
+            {
+                return;
+            }
+
+            node.Value = node.Next.Value;
+            node.Next = node.Next.Next;
+        }
+
+        /*  Write code to partition a linked list around a value x, such that all nodes less than x 
+         *  come before alt nodes greater than or equal to  */
+        public static ListNode<int> PartitionList(ListNode<int> head, int value)
+        {
+            if (head == null)
+            {
+                return null;
+            }
+
+            ListNode<int> lessStart = null;
+            ListNode<int> lessEnd = null;
+            ListNode<int> greaterOrEqualStart = null;
+            ListNode<int> greaterOrEqualEnd = null;
+
+            do
+            {
+                if (head.Value < value)
+                {
+                    if (lessStart == null)
+                    {
+                        lessStart = head;
+                        lessEnd = head;
+                    }
+                    else
+                    {
+                        lessEnd.Next = head;
+                        lessEnd = head;
+                    }
+                }
+                else
+                {
+                    if (greaterOrEqualStart == null)
+                    {
+                        greaterOrEqualStart = head;
+                        greaterOrEqualEnd = head;
+                    }
+                    else
+                    {
+                        greaterOrEqualEnd.Next = head;
+                        greaterOrEqualEnd = head;
+                    }
+                }
+
+                head = head.Next;
+            } while (head != null);
+
+            lessEnd.Next = greaterOrEqualStart;
+
+            return lessStart;
+        }
     }
 }
