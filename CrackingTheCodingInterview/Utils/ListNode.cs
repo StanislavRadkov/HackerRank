@@ -10,7 +10,6 @@ namespace CrackingTheCodingInterview
     {
         public T Value { get; set; }
         public ListNode<T> Next { get; set; }
-        public ListNode<T> Previous { get; set; }
 
         public ListNode(T value)
         {
@@ -18,16 +17,9 @@ namespace CrackingTheCodingInterview
         }
 
         public ListNode(T value, ListNode<T> next)
-            :this(value)
+            : this(value)
         {
             Next = next;
-        }
-
-        public ListNode(T value, ListNode<T> next, ListNode<T> previous)
-            :this(value)
-        {
-            Next = next;
-            Previous = previous;
         }
     }
 }

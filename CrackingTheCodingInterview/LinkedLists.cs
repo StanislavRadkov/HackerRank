@@ -21,21 +21,18 @@ namespace CrackingTheCodingInterview
             var hashset = new HashSet<int>();
 
             var node = head;
+            ListNode<int> previous = null;
 
-            do
+            while(node != null)
             {
                 if (hashset.Contains(node.Value))
                 {
-                    node = node.Previous;
-                    node.Next = node.Next.Next;
-                    if (node.Next != null)
-                    {
-                        node.Next.Previous = node;
-                    }
+                    previous.Next = node.Next;
                 }
                 else
                 {
                     hashset.Add(node.Value);
+                    previous = node;
                 }
 
                 node = node.Next;

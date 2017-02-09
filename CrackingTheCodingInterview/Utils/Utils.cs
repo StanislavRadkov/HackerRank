@@ -23,7 +23,6 @@ namespace CrackingTheCodingInterview
                 else
                 {
                     node.Next = new ListNode<T>(value);
-                    node.Next.Previous = node;
                     node = node.Next;
                 }
 
@@ -44,7 +43,6 @@ namespace CrackingTheCodingInterview
             do
             {
                 list.Add(node.Value);
-
                 node = node.Next;
             } while (node != null);
 
