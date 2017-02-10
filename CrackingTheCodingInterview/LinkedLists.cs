@@ -222,5 +222,30 @@ namespace CrackingTheCodingInterview
 
             return sumStart;
         }
+
+        public static ListNode<int> ReverseList(ListNode<int> head)
+        {
+            ListNode<int> reversedList = null;
+
+            while (head != null)
+            {
+                var itemToInsert = head;
+                head = head.Next;
+
+                itemToInsert.Next = reversedList;
+                reversedList = itemToInsert;
+            }
+
+            return reversedList;
+        }
+
+        public static ListNode<int> SumReversedOrderedLists(ListNode<int> a, ListNode<int> b)
+        {
+            var reversedA = ReverseList(a);
+            var reversedB = ReverseList(b);
+
+            return ReverseList(Sum(reversedA, reversedB));
+        }
+
     }
 }

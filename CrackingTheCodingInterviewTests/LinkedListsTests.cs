@@ -212,5 +212,35 @@ namespace CrackingTheCodingInterviewTests
         {
             Assert.AreEqual(null, LinkedLists.Sum(null, null));
         }
+
+        [TestMethod]
+        public void ReverseListTests1()
+        {
+            var a = new int[] { 1, 2, 3, 4, 5 };
+            var list = a.ToLinkedList();
+
+            var expected = new int[] { 5, 4, 3, 2, 1 };
+
+            CollectionAssert.AreEqual(expected, LinkedLists.ReverseList(list).ToEnumerable().ToArray());
+        }
+
+        [TestMethod]
+        public void ReverseListTests2()
+        {
+            Assert.AreEqual(null, LinkedLists.ReverseList(null));
+        }
+
+        [TestMethod]
+        public void SumReversedOrderedListsTests()
+        {
+            var a = new int[] { 9, 8, 9, 8, 4, 5 };
+            var b = new int[] { 6, 5, 4, 8, 2, 1, 2, 1 };
+            var listA = a.ToLinkedList();
+            var listB = b.ToLinkedList();
+
+            var expected = new int[] { 6, 6, 4, 7, 1, 9, 6, 6 };
+
+            CollectionAssert.AreEqual(expected, LinkedLists.SumReversedOrderedLists(listA, listB).ToEnumerable().ToArray());
+        }
     }
 }
