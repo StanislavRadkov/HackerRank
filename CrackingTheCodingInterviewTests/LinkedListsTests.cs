@@ -180,5 +180,37 @@ namespace CrackingTheCodingInterviewTests
         {
             CollectionAssert.AreEqual(new int[0], LinkedLists.PartitionList(null, 5).ToEnumerable().ToArray());
         }
+
+        [TestMethod]
+        public void SumTests()
+        {
+            var a = new int[] { 5, 4, 8, 9, 8, 9 };
+            var b = new int[] { 1, 2, 1, 2, 8, 4, 5, 6 };
+            var listA = a.ToLinkedList();
+            var listB = b.ToLinkedList();
+
+            var expected = new int[] { 6, 6, 9, 1, 7, 4, 6, 6 };
+
+            CollectionAssert.AreEqual(expected, LinkedLists.Sum(listA, listB).ToEnumerable().ToArray());
+        }
+
+        [TestMethod]
+        public void SumTests2()
+        {
+            var a = new int[] { 0 };
+            var b = new int[] { 0 };
+            var listA = a.ToLinkedList();
+            var listB = b.ToLinkedList();
+
+            var expected = new int[] { 0 };
+
+            CollectionAssert.AreEqual(expected, LinkedLists.Sum(listA, listB).ToEnumerable().ToArray());
+        }
+
+        [TestMethod]
+        public void SumTest3()
+        {
+            Assert.AreEqual(null, LinkedLists.Sum(null, null));
+        }
     }
 }

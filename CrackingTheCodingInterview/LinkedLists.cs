@@ -175,5 +175,52 @@ namespace CrackingTheCodingInterview
 
             return lessStart;
         }
+
+        /* You have two numbers represented by a linked list, where each node contains a 
+         * single digit. The digits are stored in reverse order, such that the 1 's digit is at the head 
+         * of the list. Write a function that adds the two numbers and returns the sum as a 
+         * linked list. 
+         * FOLLOW UP 
+         * Suppose the digits are stored in forward order. Repeat the above problem. */
+        public static ListNode<int> Sum(ListNode<int> a, ListNode<int> b)
+        {
+            ListNode<int> sumStart = null;
+            ListNode<int> sumEnd = null;
+
+            var carryOn = 0;
+            while (a != null || b != null)
+            {
+                var s = 0;
+                if (a != null)
+                {
+                    s += a.Value;
+                    a = a.Next;
+                }
+                if (b != null)
+                {
+                    s += b.Value;
+                    b = b.Next;
+                }
+
+                s += carryOn;
+                carryOn = 0;
+
+                carryOn = s / 10;
+                s = s % 10;
+
+                if (sumStart == null)
+                {
+                    sumStart = new ListNode<int>(s);
+                    sumEnd = sumStart;
+                }
+                else
+                {
+                    sumEnd.Next = new ListNode<int>(s);
+                    sumEnd = sumEnd.Next;
+                }
+            }
+
+            return sumStart;
+        }
     }
 }
