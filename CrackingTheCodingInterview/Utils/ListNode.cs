@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CrackingTheCodingInterview
 {
-    public class ListNode<T>
+    public class ListNode<T> : ICloneable
     {
         public T Value { get; set; }
         public ListNode<T> Next { get; set; }
@@ -20,6 +20,11 @@ namespace CrackingTheCodingInterview
             : this(value)
         {
             Next = next;
+        }
+
+        public object Clone()
+        {
+            return new ListNode<T>(Value);
         }
     }
 }

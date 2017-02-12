@@ -229,7 +229,7 @@ namespace CrackingTheCodingInterview
 
             while (head != null)
             {
-                var itemToInsert = head;
+                var itemToInsert = head.Clone() as ListNode<int>;
                 head = head.Next;
 
                 itemToInsert.Next = reversedList;
@@ -247,5 +247,27 @@ namespace CrackingTheCodingInterview
             return ReverseList(Sum(reversedA, reversedB));
         }
 
+        /* Given a circular linked list, implement an algorithm which returns the node at the 
+         * beginning of the loop */
+         // TODO
+
+        /* Implementa function to check if a linked list is apalindrome, */
+        public static bool IsPalindromeByReversing(ListNode<int> list)
+        {
+            var reversed = ReverseList(list);
+
+            while (reversed != null)
+            {
+                if (reversed.Value != list.Value)
+                {
+                    return false;
+                }
+
+                reversed = reversed.Next;
+                list = list.Next;
+            }
+
+            return true;
+        }
     }
 }
