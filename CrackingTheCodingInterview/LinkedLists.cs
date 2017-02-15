@@ -249,7 +249,42 @@ namespace CrackingTheCodingInterview
 
         /* Given a circular linked list, implement an algorithm which returns the node at the 
          * beginning of the loop */
-         // TODO
+        public static ListNode<int> FindLoopBeginning(ListNode<int> head)
+        {
+            var slowRunner = head;
+            var fastRunner = head;
+
+            // Find meeting point
+            while (fastRunner != null && fastRunner.Next != null)
+            {
+                slowRunner = slowRunner.Next;
+                fastRunner = fastRunner.Next.Next;
+
+                if (slowRunner == fastRunner)
+                {
+                    break;
+                }
+            }
+
+            // No loop
+            if (fastRunner == null || fastRunner.Next == null)
+            {
+                return null;
+            }
+
+            /* Move slow to Head. Keep fast at Meeting Point. Each are k steps
+            /* from the Loop Start. If they move at the same pace, they must
+             * meet at Loop Start. */
+            slowRunner = head;
+            while (slowRunner != fastRunner)
+            {
+                slowRunner = slowRunner.Next;
+                fastRunner = fastRunner.Next;
+            }
+
+            // Both now point to the start of the loop.
+            return fastRunner;
+        }
 
         /* Implementa function to check if a linked list is apalindrome, */
         public static bool IsPalindromeByReversing(ListNode<int> list)

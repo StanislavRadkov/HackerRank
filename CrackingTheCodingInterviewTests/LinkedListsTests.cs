@@ -244,6 +244,21 @@ namespace CrackingTheCodingInterviewTests
         }
 
         [TestMethod]
+        public void FindBeginningTests()
+        {
+            var a = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            var list = a.ToLinkedList();
+
+            var loopStart = LinkedLists.GetNthToLastIterative(list, 3);
+            var end = LinkedLists.GetNthToLastIterative(list, 1);
+            end.Next = loopStart;
+
+            var start = LinkedLists.FindLoopBeginning(list);
+
+            Assert.AreEqual(loopStart, start);
+        }
+
+        [TestMethod]
         public void IsPalindromeByReversingTests()
         {
             var a = new int[] { 10, 9, 8, 7, 6, 5, 6, 7, 8, 9, 10 };
