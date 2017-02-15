@@ -266,5 +266,14 @@ namespace CrackingTheCodingInterviewTests
 
            Assert.AreEqual(true, LinkedLists.IsPalindromeByReversing(list));
         }
+
+        [TestMethod]
+        public void IsPalindromeIterativeTests()
+        {
+            var a = new int[] { 10, 9, 8, 7, 6, 5, 6, 7, 8, 9, 10 };
+            var list = a.ToLinkedList();
+
+            Assert.AreEqual(true, LinkedLists.IsPalindromeIterative(list));
+        }
     }
 }

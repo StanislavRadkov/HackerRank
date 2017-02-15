@@ -304,5 +304,40 @@ namespace CrackingTheCodingInterview
 
             return true;
         }
+
+        public static bool IsPalindromeIterative(ListNode<int> head)
+        {
+            var slowRunner = head;
+            var fastRunner = head;
+
+            var stack = new Stack<int>();
+
+            while (fastRunner != null && fastRunner.Next != null)
+            {
+                stack.Push(slowRunner.Value);
+                slowRunner = slowRunner.Next;
+                fastRunner = fastRunner.Next.Next;
+            }
+
+            /* Has odd number of elements, so skip the middle element */
+            if (fastRunner != null)
+            {
+                slowRunner = slowRunner.Next;
+            }
+
+            while (slowRunner != null)
+            {
+                var top = stack.Pop();
+                
+                /* If values are different, then it's not a palindrome */
+                if (top != slowRunner.Value)
+                {
+                    return false;
+                }
+                slowRunner = slowRunner.Next;
+            }
+
+            return true;
+        }
     }
 }
