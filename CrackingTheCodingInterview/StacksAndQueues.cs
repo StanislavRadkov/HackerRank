@@ -8,5 +8,6 @@ namespace CrackingTheCodingInterview
 {
     public class StacksAndQueues
     {
+        
     }
 }
