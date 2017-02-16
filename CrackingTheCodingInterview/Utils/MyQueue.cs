@@ -25,6 +25,11 @@ namespace CrackingTheCodingInterview
 
         public T Dequeue()
         {
+            if (_dequeueStack.Count == 0 && _enqueueStack.Count == 0)
+            {
+                throw new InvalidOperationException();
+            }
+
             if (_dequeueStack.Count == 0)
             {
                 while (_enqueueStack.Count > 0)
@@ -38,6 +43,11 @@ namespace CrackingTheCodingInterview
 
         public T Peek()
         {
+            if (_dequeueStack.Count == 0 && _enqueueStack.Count == 0)
+            {
+                throw new InvalidOperationException();
+            }
+
             if (_dequeueStack.Count == 0)
             {
                 while (_enqueueStack.Count > 0)
