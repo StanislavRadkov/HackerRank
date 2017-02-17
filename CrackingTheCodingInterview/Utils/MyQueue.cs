@@ -9,8 +9,8 @@ namespace CrackingTheCodingInterview
     /* Implement a MyQueue class which implements a queue using two stacks. */
     public class MyQueue<T>
     {
-        private Stack<T> _enqueueStack;
-        private Stack<T> _dequeueStack;
+        private readonly Stack<T> _enqueueStack;
+        private readonly Stack<T> _dequeueStack;
 
         public MyQueue()
         {
