@@ -44,9 +44,12 @@
     <Compile Include="LinkedLists.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StacksAndQueues.cs" />
+    <Compile Include="TreesAndGraphs.cs" />
+    <Compile Include="Utils\BinaryTree.cs" />
     <Compile Include="Utils\ListNode.cs" />
     <Compile Include="Utils\MinStack.cs" />
     <Compile Include="Utils\MyQueue.cs" />
+    <Compile Include="Utils\TreeNode.cs" />
     <Compile Include="Utils\Utils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
