@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using CrackingTheCodingInterview;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -57,6 +58,26 @@ namespace CrackingTheCodingInterviewTests
         {
             var queue = new MyQueue<int>();
             queue.Dequeue();
+        }
+
+        [TestMethod]
+        public void SortStackWithOneAdditionalStack1()
+        {
+            var stack = new Stack<int> (new int[] {1, 10, 2, 9, 3, 8, 4, 7, 5, 6});
+
+            StacksAndQueues.SortStackWithOneAdditionalStack(stack);
+
+            CollectionAssert.AreEqual(new int[] {10, 9, 8, 7, 6, 5, 4, 3, 2, 1}, stack.ToArray());
+        }
+
+        [TestMethod]
+        public void SortStackWithOneAdditionalStack2()
+        {
+            var stack = new Stack<int>(new int[0]);
+
+            StacksAndQueues.SortStackWithOneAdditionalStack(stack);
+
+            CollectionAssert.AreEqual(new int[0] , stack.ToArray());
         }
     }
 }

@@ -56,7 +56,11 @@
     <Compile Include="ArrayAndStringsTests.cs" />
     <Compile Include="LinkedListsTests.cs" />
     <Compile Include="StacksAndQueuesTests.cs" />
+<<<<<<< HEAD
     <Compile Include="TreesAndGraphs.cs" />
+=======
+    <Compile Include="TreesAndGraphsTests.cs" />
+>>>>>>> f88050cb22111c0d1039b9bf7fb0aaf1fb76dbe2
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CrackingTheCodingInterview\CrackingTheCodingInterview.csproj">

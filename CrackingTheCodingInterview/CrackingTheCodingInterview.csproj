@@ -44,10 +44,16 @@
     <Compile Include="LinkedLists.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StacksAndQueues.cs" />
+<<<<<<< HEAD
     <Compile Include="Utils\Graph.cs" />
+=======
+    <Compile Include="TreesAndGraphs.cs" />
+    <Compile Include="Utils\BinaryTree.cs" />
+>>>>>>> f88050cb22111c0d1039b9bf7fb0aaf1fb76dbe2
     <Compile Include="Utils\ListNode.cs" />
     <Compile Include="Utils\MinStack.cs" />
     <Compile Include="Utils\MyQueue.cs" />
+    <Compile Include="Utils\TreeNode.cs" />
     <Compile Include="Utils\Utils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
