@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FDCB7110-73BC-4979-BC6A-056FE9A2B616}</ProjectGuid>
+    <ProjectGuid>{EEB0873C-14DE-45F5-A006-D0C2A5CD97B6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CrackingTheCodingInterviewTests</RootNamespace>
@@ -45,26 +45,20 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
-          <Private>False</Private>
-        </Reference>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ArrayAndStringsTests.cs" />
     <Compile Include="LinkedListsTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StacksAndQueuesTests.cs" />
-<<<<<<< HEAD
-    <Compile Include="TreesAndGraphs.cs" />
-=======
     <Compile Include="TreesAndGraphsTests.cs" />
->>>>>>> f88050cb22111c0d1039b9bf7fb0aaf1fb76dbe2
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CrackingTheCodingInterview\CrackingTheCodingInterview.csproj">
-      <Project>{c24cb368-6c29-4e52-a8fd-1a24e7a7ade8}</Project>
+      <Project>{6b63eb05-42d2-4395-afe5-d3aa4d667149}</Project>
       <Name>CrackingTheCodingInterview</Name>
     </ProjectReference>
   </ItemGroup>

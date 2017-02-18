@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C24CB368-6C29-4E52-A8FD-1A24E7A7ADE8}</ProjectGuid>
+    <ProjectGuid>{6B63EB05-42D2-4395-AFE5-D3AA4D667149}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CrackingTheCodingInterview</RootNamespace>
@@ -44,12 +44,9 @@
     <Compile Include="LinkedLists.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StacksAndQueues.cs" />
-<<<<<<< HEAD
-    <Compile Include="Utils\Graph.cs" />
-=======
     <Compile Include="TreesAndGraphs.cs" />
     <Compile Include="Utils\BinaryTree.cs" />
->>>>>>> f88050cb22111c0d1039b9bf7fb0aaf1fb76dbe2
+    <Compile Include="Utils\Graph.cs" />
     <Compile Include="Utils\ListNode.cs" />
     <Compile Include="Utils\MinStack.cs" />
     <Compile Include="Utils\MyQueue.cs" />
