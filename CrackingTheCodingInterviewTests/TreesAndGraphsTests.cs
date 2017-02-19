@@ -68,5 +68,38 @@ namespace CrackingTheCodingInterviewTests
 
             Assert.AreEqual(true, graph.Path(1, 9));
         }
+
+        [TestMethod]
+        public void GenerateTreeFromSortedArrayTests1()
+        {
+            var values = Enumerable.Range(1, 8).ToArray();
+
+            var tree = TreesAndGraphs.GenerateTreeFromSortedArray(values);
+
+            Assert.AreEqual(values.Length, tree.Count);
+            Assert.AreEqual(true, tree.IsBalanced());
+        }
+
+        [TestMethod]
+        public void GenerateTreeFromSortedArrayTests2()
+        {
+            var values = Enumerable.Range(1, 7).ToArray();
+
+            var tree = TreesAndGraphs.GenerateTreeFromSortedArray(values);
+
+            Assert.AreEqual(values.Length, tree.Count);
+            Assert.AreEqual(true, tree.IsBalanced());
+        }
+
+        [TestMethod]
+        public void GenerateTreeFromSortedArrayTests3()
+        {
+            var values = Enumerable.Range(1, 10000).ToArray();
+
+            var tree = TreesAndGraphs.GenerateTreeFromSortedArray(values);
+
+            Assert.AreEqual(values.Length, tree.Count);
+            Assert.AreEqual(true, tree.IsBalanced());
+        }
     }
 }

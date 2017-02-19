@@ -45,6 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StacksAndQueues.cs" />
     <Compile Include="TreesAndGraphs.cs" />
+    <Compile Include="Utils\BinarySearchTree.cs" />
     <Compile Include="Utils\BinaryTree.cs" />
     <Compile Include="Utils\Graph.cs" />
     <Compile Include="Utils\ListNode.cs" />
