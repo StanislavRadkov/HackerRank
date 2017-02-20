@@ -23,5 +23,10 @@ namespace CrackingTheCodingInterview
             Left = left;
             Right = right;
         }
+
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
     }
 }

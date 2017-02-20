@@ -176,6 +176,7 @@ namespace CrackingTheCodingInterviewTests
             tree.AddValue(5, 3);
             tree.AddValue(5, 7);
             tree.AddValue(10, 15);
+            tree.AddValue(15, 13);
             tree.AddValue(15, 17);
 
             Assert.AreEqual(true, TreesAndGraphs.IsBinarySearchTree(tree));

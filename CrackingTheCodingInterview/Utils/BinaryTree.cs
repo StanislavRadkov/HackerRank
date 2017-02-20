@@ -29,6 +29,11 @@ namespace CrackingTheCodingInterview
 
         private bool AddValue(BinaryTreeNode<T> node, T parent, T value)
         {
+            if (node == null)
+            {
+                return false;
+            }
+
             if (node.Value.Equals(parent))
             {
                 if (node.Left == null)
