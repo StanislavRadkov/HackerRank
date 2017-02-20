@@ -32,5 +32,29 @@ namespace CrackingTheCodingInterview
 
             return tree;
         }
+
+        /* Implemen t a function to check if a binary tree isa binary search tree. */
+        public static bool IsBinarySearchTree(BinaryTree<int> tree)
+        {
+            return IsBinarySearchTree(tree.Root, int.MinValue, int.MaxValue);
+        }
+
+        private static bool IsBinarySearchTree(BinaryTreeNode<int> node, int min, int max)
+        {
+            if (node == null)
+            {
+                return true;
+            }
+
+            if (node.Value <= min || node.Value > max)
+            {
+                return false;
+            }
+
+            var leftSubtreeValid = IsBinarySearchTree(node.Left, min, node.Value);
+            var rightSubtreeValid = IsBinarySearchTree(node.Right, node.Value, max);
+
+            return leftSubtreeValid && rightSubtreeValid;
+        }
     }
 }

@@ -12,7 +12,64 @@ namespace CrackingTheCodingInterview
 
         public BinaryTree()
         {
+        }
 
+        public void AddValue(T parent, T value)
+        {
+            if (Root == null)
+            {
+                Root = new BinaryTreeNode<T>(parent);
+                Root.Left = new BinaryTreeNode<T>(value);
+            }
+            else
+            {
+                AddValue(Root, parent, value);
+            }
+        }
+
+        private bool AddValue(BinaryTreeNode<T> node, T parent, T value)
+        {
+            if (node.Value.Equals(parent))
+            {
+                if (node.Left == null)
+                {
+                    node.Left = new BinaryTreeNode<T>(value);
+                }
+                else if (node.Right == null)
+                {
+                    node.Right = new BinaryTreeNode<T>(value);
+                }
+                else
+                {
+                    AddValue(node.Left, value);
+                }
+
+                return true;
+            }
+
+            var lefSubtree = AddValue(node.Left, parent, value);
+            if (lefSubtree)
+            {
+                return true;
+            }
+
+            return AddValue(node.Right, parent, value);
+        }
+
+        private void AddValue(BinaryTreeNode<T> node, T value)
+        {
+            if (node.Left == null)
+            {
+                node.Left = new BinaryTreeNode<T>(value);
+            }
+            else if (node.Right == null)
+            {
+                node.Right = new BinaryTreeNode<T>(value);
+            }
+            else
+            {
+                AddValue(node.Left, value);
+            }
         }
 
         public bool IsBalanced()

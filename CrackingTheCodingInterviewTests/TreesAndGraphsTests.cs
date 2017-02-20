@@ -143,5 +143,42 @@ namespace CrackingTheCodingInterviewTests
 
             CollectionAssert.AreEqual(levels[0], new List<int> {1});
         }
+
+        [TestMethod]
+        public void IsBinarySearchTreeTests1()
+        {
+            var tree = new BinaryTree<int>();
+            tree.Root = new BinaryTreeNode<int>(1);
+
+            Assert.AreEqual(true, TreesAndGraphs.IsBinarySearchTree(tree));
+        }
+
+        [TestMethod]
+        public void IsBinarySearchTreeTests2()
+        {
+            var tree = new BinaryTree<int>();
+            tree.Root = new BinaryTreeNode<int>(20);
+            tree.AddValue(20, 10);
+            tree.AddValue(10, 25);
+            tree.AddValue(20, 30);
+
+            Assert.AreEqual(false, TreesAndGraphs.IsBinarySearchTree(tree));
+        }
+
+        [TestMethod]
+        public void IsBinarySearchTreeTests3()
+        {
+            var tree = new BinaryTree<int>();
+            tree.Root = new BinaryTreeNode<int>(20);
+            tree.AddValue(20, 10);
+            tree.AddValue(20, 30);
+            tree.AddValue(10, 5);
+            tree.AddValue(5, 3);
+            tree.AddValue(5, 7);
+            tree.AddValue(10, 15);
+            tree.AddValue(15, 17);
+
+            Assert.AreEqual(true, TreesAndGraphs.IsBinarySearchTree(tree));
+        }
     }
 }
