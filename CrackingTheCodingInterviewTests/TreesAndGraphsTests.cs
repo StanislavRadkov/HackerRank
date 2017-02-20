@@ -101,5 +101,26 @@ namespace CrackingTheCodingInterviewTests
             Assert.AreEqual(values.Length, tree.Count);
             Assert.AreEqual(true, tree.IsBalanced());
         }
+
+        [TestMethod]
+        public void GetListOfDepthsTests()
+        {
+            var tree = new Tree<int>();
+            tree.Root = new TreeNode<int>(1);
+            tree.AddValue(1, 2);
+            tree.AddValue(1, 3);
+
+            tree.AddValue(2, 4);
+            tree.AddValue(2, 5);
+
+            tree.AddValue(3, 6);
+            tree.AddValue(3, 7);
+
+            var levels = tree.GetListOfDepths();
+
+            CollectionAssert.AreEqual(levels[0], new List<int> { 1 });
+            CollectionAssert.AreEqual(levels[1], new List<int> { 2, 3 });
+            CollectionAssert.AreEqual(levels[2], new List<int> { 4, 5, 6, 7 });
+        }
     }
 }
