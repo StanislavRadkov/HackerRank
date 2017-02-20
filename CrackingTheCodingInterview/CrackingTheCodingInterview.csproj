@@ -51,6 +51,8 @@
     <Compile Include="Utils\ListNode.cs" />
     <Compile Include="Utils\MinStack.cs" />
     <Compile Include="Utils\MyQueue.cs" />
+    <Compile Include="Utils\BinaryTreeNode.cs" />
+    <Compile Include="Utils\Tree.cs" />
     <Compile Include="Utils\TreeNode.cs" />
     <Compile Include="Utils\Utils.cs" />
   </ItemGroup>

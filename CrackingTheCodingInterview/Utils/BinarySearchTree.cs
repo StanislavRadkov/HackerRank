@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace CrackingTheCodingInterview
 {
-    public class BinarySearchTree<T>: BinaryTree<T> where T:IComparable
+    public class BinarySearchTree<T> where T:IComparable
     {
+        public BinaryTreeNode<T> Root { get; set; }
         public int Count { get; private set; }
 
         public void Insert(T value)
@@ -50,6 +51,39 @@ namespace CrackingTheCodingInterview
                     }
                 }
             }
+        }
+
+        public bool IsBalanced()
+        {
+            if (Root == null)
+            {
+                return true;
+            }
+
+            var leftSubtreeHeight = Root.Left == null ? 0 : GetHeight(Root.Left);
+            var rightSubtreeHeight = Root.Right == null ? 0 : GetHeight(Root.Right);
+
+            return Math.Abs(leftSubtreeHeight - rightSubtreeHeight) <= 1;
+        }
+
+        public int GetHeight()
+        {
+            if (Root == null)
+            {
+                return 0;
+            }
+
+            return GetHeight(Root);
+        }
+
+        private int GetHeight(BinaryTreeNode<T> node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+
+            return Math.Max(GetHeight(node.Left), GetHeight(node.Right)) + 1;
         }
     }
 }

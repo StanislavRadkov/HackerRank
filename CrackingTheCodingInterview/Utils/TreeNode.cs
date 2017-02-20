@@ -6,22 +6,31 @@ using System.Threading.Tasks;
 
 namespace CrackingTheCodingInterview
 {
-    public class BinaryTreeNode<T>
+    public class TreeNode<T>
     {
-        public T Value { get; set; }
-        public BinaryTreeNode<T> Left { get; set; }
-        public BinaryTreeNode<T> Right { get; set; }
+        public TreeNode(T value)
+            : this(value, Enumerable.Empty<T>())
+        {
+        }
 
-        public BinaryTreeNode(T value)
+        public TreeNode(T value, IEnumerable<T> children)
         {
             Value = value;
+            Children = new List<TreeNode<T>>();
+
+            foreach (var child in children)
+            {
+                Children.Add(new TreeNode<T>(child));
+            }
         }
 
-        public BinaryTreeNode(T value, BinaryTreeNode<T> left, BinaryTreeNode<T> right)
-            :this(value)
+        public void AddChild(T value)
         {
-            Left = left;
-            Right = right;
+            Children.Add(new TreeNode<T>(value));
         }
+
+        public T Value { get; set; }
+
+        public List<TreeNode<T>> Children { get; set; }
     }
 }
