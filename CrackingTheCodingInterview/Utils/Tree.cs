@@ -43,7 +43,7 @@ namespace CrackingTheCodingInterview
         {
             if (Root == null)
             {
-                return null;
+                return new List<List<T>>();
             }
 
             var lists = new List<List<T>>();

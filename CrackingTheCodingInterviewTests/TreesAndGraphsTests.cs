@@ -103,7 +103,7 @@ namespace CrackingTheCodingInterviewTests
         }
 
         [TestMethod]
-        public void GetListOfDepthsTests()
+        public void GetListOfDepthsTests1()
         {
             var tree = new Tree<int>();
             tree.Root = new TreeNode<int>(1);
@@ -121,6 +121,27 @@ namespace CrackingTheCodingInterviewTests
             CollectionAssert.AreEqual(levels[0], new List<int> { 1 });
             CollectionAssert.AreEqual(levels[1], new List<int> { 2, 3 });
             CollectionAssert.AreEqual(levels[2], new List<int> { 4, 5, 6, 7 });
+        }
+
+        [TestMethod]
+        public void GetListOfDepthsTests2()
+        {
+            var tree = new Tree<int>();
+
+            var levels = tree.GetListOfDepths();
+
+            CollectionAssert.AreEqual(levels, new List<List<int>>());
+        }
+
+        [TestMethod]
+        public void GetListOfDepthsTests3()
+        {
+            var tree = new Tree<int>();
+            tree.Root = new TreeNode<int>(1);
+
+            var levels = tree.GetListOfDepths();
+
+            CollectionAssert.AreEqual(levels[0], new List<int> {1});
         }
     }
 }
