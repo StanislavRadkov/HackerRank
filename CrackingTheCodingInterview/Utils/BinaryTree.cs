@@ -38,11 +38,11 @@ namespace CrackingTheCodingInterview
             {
                 if (node.Left == null)
                 {
-                    node.Left = new BinaryTreeNode<T>(value);
+                    node.Left = new BinaryTreeNode<T>(value, node);
                 }
                 else if (node.Right == null)
                 {
-                    node.Right = new BinaryTreeNode<T>(value);
+                    node.Right = new BinaryTreeNode<T>(value, node);
                 }
                 else
                 {
@@ -65,11 +65,11 @@ namespace CrackingTheCodingInterview
         {
             if (node.Left == null)
             {
-                node.Left = new BinaryTreeNode<T>(value);
+                node.Left = new BinaryTreeNode<T>(value, node);
             }
             else if (node.Right == null)
             {
-                node.Right = new BinaryTreeNode<T>(value);
+                node.Right = new BinaryTreeNode<T>(value, node);
             }
             else
             {

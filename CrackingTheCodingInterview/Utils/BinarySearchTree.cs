@@ -27,7 +27,7 @@ namespace CrackingTheCodingInterview
                     {
                         if (node.Left == null)
                         {
-                            node.Left = new BinaryTreeNode<T>(value);
+                            node.Left = new BinaryTreeNode<T>(value, node);
                             Count++;
                             return;
                         }
@@ -40,7 +40,7 @@ namespace CrackingTheCodingInterview
                     {
                         if (node.Right == null)
                         {
-                            node.Right = new BinaryTreeNode<T>(value);
+                            node.Right = new BinaryTreeNode<T>(value, node);
                             Count++;
                             return;
                         }
@@ -50,6 +50,38 @@ namespace CrackingTheCodingInterview
                         }
                     }
                 }
+            }
+        }
+
+        public BinaryTreeNode<T> FindNode(T value)
+        {
+            if (Root == null)
+            {
+                return null;
+            }
+
+            return Find(Root, value);
+        }
+
+        private BinaryTreeNode<T> Find(BinaryTreeNode<T> node, T value)
+        {
+            if (node == null)
+            {
+                return null;
+            }
+
+            if (node.Value.Equals(value))
+            {
+                return node;
+            }
+
+            if (value.CompareTo(node.Value) <= 0)
+            {
+                return Find(node.Left, value);
+            }
+            else
+            {
+                return Find(node.Right, value);
             }
         }
 

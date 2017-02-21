@@ -56,5 +56,48 @@ namespace CrackingTheCodingInterview
 
             return leftSubtreeValid && rightSubtreeValid;
         }
+
+        /* Write an algorithm to find the 'next'node (i.e., in-order successor) of a given node in 
+         * a binary search tree. Youmay assume that each nodehas a link to its parent. */
+        public static BinaryTreeNode<int> InOrderSuccessor(BinaryTreeNode<int> node)
+        {
+            if (node == null)
+            {
+                return null;
+            }
+
+            if (node.Right != null)
+            {
+                return LeftMostChild(node.Right);
+            }
+            else
+            {
+                BinaryTreeNode<int> q = node;
+                BinaryTreeNode<int> x = q.Parent;
+                // Go up until we're on left instead of right
+                while (x != null && x.Left != q)
+                {
+                    q = x;
+                    x = x.Parent;
+                }
+
+                return x;
+            }
+        }
+
+        private static BinaryTreeNode<int> LeftMostChild(BinaryTreeNode<int> node)
+        {
+            if (node == null)
+            {
+                return null;
+            }
+
+            while (node.Left != null)
+            {
+                node = node.Left;
+            }
+
+            return node; 
+        }
     }
 }

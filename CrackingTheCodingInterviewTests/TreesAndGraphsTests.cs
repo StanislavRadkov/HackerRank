@@ -181,5 +181,60 @@ namespace CrackingTheCodingInterviewTests
 
             Assert.AreEqual(true, TreesAndGraphs.IsBinarySearchTree(tree));
         }
+
+        [TestMethod]
+        public void InOrderSuccessorTests1()
+        {
+            var values = Enumerable.Range(1, 100).ToArray();
+
+            var tree = TreesAndGraphs.GenerateTreeFromSortedArray(values);
+            var node = tree.FindNode(50);
+
+            Assert.AreEqual(51, TreesAndGraphs.InOrderSuccessor(node).Value);
+        }
+
+        [TestMethod]
+        public void InOrderSuccessorTests2()
+        {
+            var values = Enumerable.Range(1, 100).ToArray();
+
+            var tree = TreesAndGraphs.GenerateTreeFromSortedArray(values);
+            var node = tree.FindNode(25);
+
+            Assert.AreEqual(26, TreesAndGraphs.InOrderSuccessor(node).Value);
+        }
+
+        [TestMethod]
+        public void InOrderSuccessorTest3()
+        {
+            var values = Enumerable.Range(1, 100).ToArray();
+
+            var tree = TreesAndGraphs.GenerateTreeFromSortedArray(values);
+            var node = tree.FindNode(76);
+
+            Assert.AreEqual(77, TreesAndGraphs.InOrderSuccessor(node).Value);
+        }
+
+        [TestMethod]
+        public void InOrderSuccessorTests4()
+        {
+            var values = Enumerable.Range(1, 10000).ToArray();
+
+            var tree = TreesAndGraphs.GenerateTreeFromSortedArray(values);
+            var node = tree.FindNode(8888);
+
+            Assert.AreEqual(8889, TreesAndGraphs.InOrderSuccessor(node).Value);
+        }
+
+        [TestMethod]
+        public void InOrderSuccessorTests5()
+        {
+            var tree = new BinarySearchTree<int>();
+            tree.Root = new BinaryTreeNode<int>(5);
+            tree.Insert(4);
+            tree.Insert(3);
+
+            Assert.AreEqual(null, TreesAndGraphs.InOrderSuccessor(tree.Root));
+        }
     }
 }
