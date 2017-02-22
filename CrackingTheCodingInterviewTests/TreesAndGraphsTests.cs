@@ -312,5 +312,34 @@ namespace CrackingTheCodingInterviewTests
 
             Assert.AreEqual("c", tree.FindCommonAncestor("x", "k").Value);
         }
+
+        [TestMethod]
+        public void FindCommonAncestorTests8()
+        {
+            var tree = new BinaryTree<string>();
+
+            tree.AddValue("a", "b");
+            tree.AddValue("a", "c");
+            tree.AddValue("c", "k");
+            tree.AddValue("k", "x");
+
+            Assert.AreEqual("k", tree.FindCommonAncestor("x", "k").Value);
+            Assert.AreEqual("k", tree.FindCommonAncestor("k", "x").Value);
+        }
+
+        [TestMethod]
+        public void FindCommonAncestorTests9()
+        {
+            var tree = new BinaryTree<string>();
+
+            tree.AddValue("a", "b");
+            tree.AddValue("a", "c");
+            tree.AddValue("c", "k");
+            tree.AddValue("k", "z");
+            tree.AddValue("z", "x");
+
+            Assert.AreEqual("k", tree.FindCommonAncestor("x", "k").Value);
+            Assert.AreEqual("k", tree.FindCommonAncestor("k", "x").Value);
+        }
     }
 }
