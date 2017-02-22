@@ -8,7 +8,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CrackingTheCodingInterviewTests
 {
-
     [TestClass]
     public class TreesAndGraphsTests
     {
@@ -235,6 +234,83 @@ namespace CrackingTheCodingInterviewTests
             tree.Insert(3);
 
             Assert.AreEqual(null, TreesAndGraphs.InOrderSuccessor(tree.Root));
+        }
+
+        [TestMethod]
+        public void FindCommonAncestorTests1()
+        {
+            var tree = new BinaryTree<string>();
+
+            Assert.AreEqual(null, tree.FindCommonAncestor(String.Empty, String.Empty));
+        }
+
+        [TestMethod]
+        public void FindCommonAncestorTests2()
+        {
+            var tree = new BinaryTree<string>();
+
+            tree.AddValue("a", "b");
+
+            Assert.AreEqual("a", tree.FindCommonAncestor("a", "b").Value);
+        }
+
+        [TestMethod]
+        public void FindCommonAncestorTests3()
+        {
+            var tree = new BinaryTree<string>();
+
+            tree.AddValue("a", "b");
+            tree.AddValue("a", "c");
+
+            Assert.AreEqual("a", tree.FindCommonAncestor("b", "c").Value);
+        }
+
+        [TestMethod]
+        public void FindCommonAncestorTests4()
+        {
+            var tree = new BinaryTree<string>();
+
+            tree.AddValue("a", "b");
+            tree.AddValue("a", "c");
+
+            Assert.AreEqual("a", tree.FindCommonAncestor("a", "b").Value);
+        }
+
+        [TestMethod]
+        public void FindCommonAncestorTests5()
+        {
+            var tree = new BinaryTree<string>();
+
+            tree.AddValue("a", "b");
+            tree.AddValue("a", "c");
+
+            Assert.AreEqual("a", tree.FindCommonAncestor("a", "c").Value);
+        }
+
+        [TestMethod]
+        public void FindCommonAncestorTests6()
+        {
+            var tree = new BinaryTree<string>();
+
+            tree.AddValue("a", "b");
+            tree.AddValue("a", "c");
+            tree.AddValue("c", "k");
+            tree.AddValue("b", "x");
+
+            Assert.AreEqual("a", tree.FindCommonAncestor("x", "k").Value);
+        }
+
+        [TestMethod]
+        public void FindCommonAncestorTests7()
+        {
+            var tree = new BinaryTree<string>();
+
+            tree.AddValue("a", "b");
+            tree.AddValue("a", "c");
+            tree.AddValue("c", "k");
+            tree.AddValue("c", "x");
+
+            Assert.AreEqual("c", tree.FindCommonAncestor("x", "k").Value);
         }
     }
 }

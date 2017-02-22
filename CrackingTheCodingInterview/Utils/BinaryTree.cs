@@ -27,6 +27,62 @@ namespace CrackingTheCodingInterview
             }
         }
 
+        /* Design an algorithm and write code to find the first common ancestor of two nodes 
+         * in a binary tree. Avoid storing additional nodes in a data structure. NOTE: This is not
+         * necessarily a binary search tree. */
+        public BinaryTreeNode<T> FindCommonAncestor(T a, T b)
+        {
+            return FindCommonAncestor(Root, a, b);
+        }
+
+        private BinaryTreeNode<T> FindCommonAncestor(BinaryTreeNode<T> node, T a, T b)
+        {
+            if (node == null)
+            {
+                return null;
+            }
+
+            if (node.Value.Equals(a) || node.Value.Equals(b))
+            {
+                return node;
+            }
+
+            var aInLeftSubtree = Find(node.Left, a);
+            var bInRightSubtree = Find(node.Left, b);
+
+            /* If a and b are on different sides, return root. */
+            if (aInLeftSubtree != bInRightSubtree)
+            {
+                return node;
+            }
+
+            /* Else, they are on the same side. Traverse this side. */
+            BinaryTreeNode<T> child = aInLeftSubtree ? node.Left : node.Right;
+
+            return FindCommonAncestor(child, a, b);
+        }
+
+        private bool Find(BinaryTreeNode<T> node, T value)
+        {
+            if (node == null)
+            {
+                return false;
+            }
+
+            if (node.Value.Equals(value))
+            {
+                return true;
+            }
+
+            var inLeftSubtree = Find(node.Left, value);
+            if (inLeftSubtree)
+            {
+                return true;
+            }
+
+            return Find(node.Right, value);
+        }
+
         private bool AddValue(BinaryTreeNode<T> node, T parent, T value)
         {
             if (node == null)
