@@ -130,7 +130,7 @@ namespace CrackingTheCodingInterview
                 }
             }
 
-            return SubTree(node2.Left, node2) || SubTree(node2.Right, node2);
+            return SubTree(node1.Left, node2) || SubTree(node1.Right, node2);
         }
 
         private static bool MatchTree(BinaryTreeNode<string> node1, BinaryTreeNode<string> node2)

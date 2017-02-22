@@ -400,7 +400,7 @@ namespace CrackingTheCodingInterviewTests
             tree2.AddValue("k", "z");
             tree2.AddValue("z", "x");
 
-            Assert.AreEqual(false, TreesAndGraphs.IsSubtree(tree1, tree2));
+            Assert.AreEqual(true, TreesAndGraphs.IsSubtree(tree1, tree2));
         }
 
         [TestMethod]
