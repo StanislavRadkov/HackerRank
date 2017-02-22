@@ -99,5 +99,58 @@ namespace CrackingTheCodingInterview
 
             return node; 
         }
+
+        /* You have two very large binary trees: Tl, with millions of nodes, and T2, with 
+         * hundreds of nodes. Create an algorithm to decide ifT2 is a subtree ofTl. 
+         * A tree T2 is a subtree of Tl if there exists a node n in Tl such that the subtree of n
+         *  is identical to T2. That is, if you cut off the tree at node n, the two trees would be 
+         *  identical. */
+        public static bool IsSubtree(BinaryTree<string> tree1, BinaryTree<string> tree2)
+        {
+            if (tree2.Root == null || tree2.Root == null)
+            {
+                return true;
+            }
+
+            return SubTree(tree1.Root, tree2.Root);
+        }
+
+        private static bool SubTree(BinaryTreeNode<String> node1, BinaryTreeNode<String> node2)
+        {
+            if (node1 == null)
+            {
+                return false;
+            }
+
+            if (node1.Value == node2.Value)
+            {
+                if (MatchTree(node1, node2))
+                {
+                    return true;
+                }
+            }
+
+            return SubTree(node2.Left, node2) || SubTree(node2.Right, node2);
+        }
+
+        private static bool MatchTree(BinaryTreeNode<string> node1, BinaryTreeNode<string> node2)
+        {
+            if (node1 == null && node2 == null)
+            {
+                return true;
+            }
+
+            if (node1 == null || node2 == null)
+            {
+                return false;
+            }
+
+            if (node1.Value != node2.Value)
+            {
+                return false;
+            }
+
+            return MatchTree(node1.Left, node2.Left) && MatchTree(node1.Right, node2.Right);
+        }
     }
 }

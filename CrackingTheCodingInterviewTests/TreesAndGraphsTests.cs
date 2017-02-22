@@ -341,5 +341,84 @@ namespace CrackingTheCodingInterviewTests
             Assert.AreEqual("k", tree.FindCommonAncestor("x", "k").Value);
             Assert.AreEqual("k", tree.FindCommonAncestor("k", "x").Value);
         }
+
+        [TestMethod]
+        public void IsSubtreeTreesTests1()
+        {
+            var tree1 = new BinaryTree<string>();
+
+            tree1.AddValue("a", "b");
+            tree1.AddValue("a", "c");
+            tree1.AddValue("c", "k");
+            tree1.AddValue("k", "z");
+            tree1.AddValue("z", "x");
+
+            var tree2 = new BinaryTree<string>();
+
+            tree2.AddValue("k", "z");
+            tree2.AddValue("z", "x");
+
+            Assert.AreEqual(true, TreesAndGraphs.IsSubtree(tree1, tree2));
+        }
+
+        [TestMethod]
+        public void IsSubtreeTreesTests2()
+        {
+            var tree1 = new BinaryTree<string>();
+
+            tree1.AddValue("a", "b");
+            tree1.AddValue("a", "c");
+            tree1.AddValue("c", "k");
+            tree1.AddValue("k", "z");
+            tree1.AddValue("z", "x");
+
+            var tree2 = new BinaryTree<string>();
+
+            tree2.AddValue("k", "z");
+            tree2.AddValue("z", "x");
+            tree2.AddValue("x", "t");
+
+            Assert.AreEqual(false, TreesAndGraphs.IsSubtree(tree1, tree2));
+        }
+
+        [TestMethod]
+        public void IsSubtreeTreesTests3()
+        {
+            var tree1 = new BinaryTree<string>();
+
+            tree1.AddValue("a", "b");
+            tree1.AddValue("a", "c");
+            tree1.AddValue("c", "k");
+            tree1.AddValue("k", "z");
+            tree1.AddValue("z", "x");
+
+            var tree2 = new BinaryTree<string>();
+
+            tree2.AddValue("a", "b");
+            tree2.AddValue("a", "c");
+            tree2.AddValue("c", "k");
+            tree2.AddValue("k", "z");
+            tree2.AddValue("z", "x");
+
+            Assert.AreEqual(false, TreesAndGraphs.IsSubtree(tree1, tree2));
+        }
+
+        [TestMethod]
+        public void IsSubtreeTreesTests4()
+        {
+            var tree1 = new BinaryTree<string>();
+
+            tree1.AddValue("a", "b");
+            tree1.AddValue("a", "c");
+            tree1.AddValue("c", "k");
+            tree1.AddValue("k", "z");
+            tree1.AddValue("z", "x");
+
+            var tree2 = new BinaryTree<string>();
+
+            tree2.Root = new BinaryTreeNode<string>("k");
+
+            Assert.AreEqual(false, TreesAndGraphs.IsSubtree(tree1, tree2));
+        }
     }
 }
