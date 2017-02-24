@@ -420,5 +420,79 @@ namespace CrackingTheCodingInterviewTests
 
             Assert.AreEqual(false, TreesAndGraphs.IsSubtree(tree1, tree2));
         }
+
+        [TestMethod]
+        public void GetSumPathsTests1()
+        {
+            var tree = new BinaryTree<int>();
+
+            Assert.AreEqual(0, TreesAndGraphs.GetSumPaths(tree, 10).Count);
+        }
+
+        [TestMethod]
+        public void GetSumPathsTests2()
+        {
+            var tree = new BinaryTree<int>();
+
+            tree.AddValue(1, 2);
+            tree.AddValue(1, 3);
+            tree.AddValue(2, 4);
+            tree.AddValue(2, 5);
+            tree.AddValue(4, 8);
+            tree.AddValue(5, 9);
+            tree.AddValue(3, 6);
+            tree.AddValue(3, 7);
+            tree.AddValue(6, 10);
+            tree.AddValue(7, 11);
+
+            var paths = TreesAndGraphs.GetSumPaths(tree, 9);
+
+            CollectionAssert.AreEqual(new List<int> { 9 }, paths[0]);
+            CollectionAssert.AreEqual(new List<int> { 3, 6 }, paths[1]);
+        }
+
+        [TestMethod]
+        public void GetSumPathsTests3()
+        {
+            var tree = new BinaryTree<int>();
+
+            tree.AddValue(1, 2);
+            tree.AddValue(1, 3);
+            tree.AddValue(2, 4);
+            tree.AddValue(2, 5);
+            tree.AddValue(4, 8);
+            tree.AddValue(5, 9);
+            tree.AddValue(3, 6);
+            tree.AddValue(3, 7);
+            tree.AddValue(6, 10);
+            tree.AddValue(7, 11);
+
+            var paths = TreesAndGraphs.GetSumPaths(tree, 14);
+
+            CollectionAssert.AreEqual(new List<int> { 2, 4, 8 }, paths[0]);
+            CollectionAssert.AreEqual(new List<int> { 5, 9 }, paths[1]);
+        }
+
+        [TestMethod]
+        public void GetSumPathsTests4()
+        {
+            var tree = new BinaryTree<int>();
+
+            tree.AddValue(1, 2);
+            tree.AddValue(1, 3);
+            tree.AddValue(2, 4);
+            tree.AddValue(2, 5);
+            tree.AddValue(4, 8);
+            tree.AddValue(5, 9);
+            tree.AddValue(3, 6);
+            tree.AddValue(3, 7);
+            tree.AddValue(6, 10);
+            tree.AddValue(7, 11);
+
+            var paths = TreesAndGraphs.GetSumPaths(tree, 16);
+
+            CollectionAssert.AreEqual(new List<int> { 2, 5, 9  }, paths[0]);
+            CollectionAssert.AreEqual(new List<int> { 6, 10 }, paths[1]);
+        }
     }
 }

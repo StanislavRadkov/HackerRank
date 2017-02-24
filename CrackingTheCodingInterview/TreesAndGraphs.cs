@@ -152,5 +152,44 @@ namespace CrackingTheCodingInterview
 
             return MatchTree(node1.Left, node2.Left) && MatchTree(node1.Right, node2.Right);
         }
+
+        /* You are given a binary tree in which each node contains a value. Design an algorithm 
+         * to print all paths which sum to a given value. The path does not need to start 
+         * or end at the root or a leaf. */
+        public static List<List<int>> GetSumPaths(BinaryTree<int> tree, int sum)
+        {
+            var sums = new List<List<int>>();
+            var currentPath = new List<int>();
+
+            FindSum(tree.Root, sums, currentPath, sum);
+
+            return sums;
+        }
+
+        private static void FindSum(BinaryTreeNode<int> node, List<List<int>> sums, List<int> currentPath, int sum)
+        {
+            if (node == null)
+            {
+                return;
+            }
+
+            currentPath.Add(node.Value);
+
+            //check sum
+            var currentSum = 0;
+            for (var i = currentPath.Count - 1; i >= 0; i--)
+            {
+                currentSum += currentPath[i];
+                if (currentSum == sum)
+                {
+                    sums.Add(currentPath.GetRange(i, currentPath.Count - i));
+                }
+            }
+
+            FindSum(node.Left, sums, currentPath, sum);
+            FindSum(node.Right, sums, currentPath, sum);
+
+            currentPath.RemoveAt(currentPath.Count - 1);
+        }
     }
 }
