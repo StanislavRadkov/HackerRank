@@ -22,5 +22,38 @@ namespace CrackingTheCodingInterview
 
             return n;
         }
+
+        /* Given a positive integer, print the next smallest and the next largest number that 
+         * have the same number of 7bits in their binary representation. */
+        public static Tuple<uint, uint> GetNextNumbersWithSameNumberBruteForce(uint number)
+        {
+            checked
+            {
+                var bits = CountBits(number);
+
+                var previous = number;
+                while (CountBits(--previous) != bits) ;
+
+                var next = number;
+                while (CountBits(++next) != bits) ;
+
+                return new Tuple<uint, uint>(previous, next);
+            }
+        }
+
+        public static byte CountBits(uint number)
+        {
+            byte n = 0;
+
+            for (var i = 0; i < 32; i++)
+            {
+                if ((number & (1 << i)) != 0)
+                {
+                    n++;
+                }
+            }
+
+            return n;
+        }
     }
 }
