@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayAndStrings.cs" />
+    <Compile Include="BitManipulation.cs" />
     <Compile Include="LinkedLists.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StacksAndQueues.cs" />
