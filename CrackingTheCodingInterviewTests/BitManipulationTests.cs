@@ -61,5 +61,17 @@ namespace CrackingTheCodingInterviewTests
             Assert.AreEqual(result.Item1, 59u);
             Assert.AreEqual(result.Item2, 62u);
         }
+
+        [TestMethod]
+        public void CountBitsToConvertTests1()
+        {
+            Assert.AreEqual(7, BitManipulation.CountBitsToConvert(1, 255));
+        }
+
+        [TestMethod]
+        public void CountBitsToConvertTests2()
+        {
+            Assert.AreEqual(0, BitManipulation.CountBitsToConvert(0, 0));
+        }
     }
 }
