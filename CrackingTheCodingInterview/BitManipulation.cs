@@ -55,5 +55,25 @@ namespace CrackingTheCodingInterview
 
             return n;
         }
+
+        // http://algorithmsandme.in/2014/04/next-smallest-number-with-same-number-of-bits-set/
+        public static Tuple<uint, uint> GetNextNumbersWithSameNumber(uint x)
+        {
+            checked
+            {
+                var rightmost = x & ~(x - 1);
+                var swapped = x + rightmost;
+                var xor = x ^ swapped;
+                var adjusted = (xor >> 2)/rightmost;
+                var next = swapped | adjusted;
+
+                var t = x + 1;
+                var u = t ^ x;
+                var v = t & x;
+                uint previous = (uint)(v - (v & -v) / (u + 1));
+
+                return new Tuple<uint, uint>(previous, next);
+            }
+        }
     }
 }

@@ -52,5 +52,14 @@ namespace CrackingTheCodingInterviewTests
         {
             BitManipulation.GetNextNumbersWithSameNumberBruteForce(15);
         }
+
+        [TestMethod]
+        public void GetNextNumbersWithSameNumberTest1()
+        {
+            var result = BitManipulation.GetNextNumbersWithSameNumber(61);
+
+            Assert.AreEqual(result.Item1, 59u);
+            Assert.AreEqual(result.Item2, 62u);
+        }
     }
 }
