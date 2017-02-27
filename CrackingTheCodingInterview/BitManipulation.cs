@@ -88,5 +88,15 @@ namespace CrackingTheCodingInterview
 
             return count;
         }
+
+        /* Write a program to swap odd and even bits in an integer with as few instructions as 
+         * possible (e.g., bit 0 and bit! are swapped, bit 2 and bit 3 are swapped, and soon) */
+        public static uint SwapBits(uint x)
+        {
+            // 0xAAAAAAAA -> 10101010101010101010101010101010
+            // 0x55555555 -> 1010101010101010101010101010101
+
+            return (((x & 0xAAAAAAAA) >> 1) | ((x & 0x55555555) << 1) );
+        }
     }
 }
