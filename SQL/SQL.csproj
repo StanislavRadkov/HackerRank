@@ -50,6 +50,11 @@
     <Content Include="BasicSelect\RevisingTheSelectQueryII.sql" />
     <Content Include="BasicSelect\SelectAll.sql" />
     <Content Include="BasicSelect\SelectByID.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation1.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation3.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation4.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation5.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation6.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
