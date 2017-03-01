@@ -58,6 +58,7 @@
     <Compile Include="QuickSort2Tests.cs" />
     <Compile Include="RunningTimeOfAlgorithmsTests.cs" />
     <Compile Include="Quicksort1PartitionTests.cs" />
+    <Compile Include="QuicksortInPlaceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sorting\Sorting.csproj">
