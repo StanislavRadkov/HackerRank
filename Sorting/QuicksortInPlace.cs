@@ -21,6 +21,15 @@ namespace Sorting
                 return;
             }
 
+            var p = Partition(arr, left, right);
+            Trace.WriteLine(String.Join(" ", arr));
+
+            Sort(arr, left, p - 1);
+            Sort(arr, p + 1, right);
+        }
+
+        private static int Partition(int[] arr, int left, int right)
+        {
             Action<int, int> swap = (a, b) =>
             {
                 var temp = arr[a];
@@ -42,10 +51,7 @@ namespace Sorting
 
             swap(i, right);
 
-            Trace.WriteLine(String.Join(" ", arr));
-
-            Sort(arr, left, i - 1);
-            Sort(arr, i + 1, right);
+            return i;
         }
     }
 }
