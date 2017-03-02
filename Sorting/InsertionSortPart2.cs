@@ -31,5 +31,23 @@ namespace Sorting
                 yield return result;
             }
         }
+
+        public static void Sort(int[] data, ref int count)
+        {
+            for (var i = 1; i < data.Length; i++)
+            {
+                var value = data[i];
+                var j = i - 1;
+
+                while (j >= 0 && data[j] > value)
+                {
+                    data[j + 1] = data[j];
+                    count++;
+                    j--;
+                }
+
+                data[j + 1] = value;
+            }
+        }
     }
 }

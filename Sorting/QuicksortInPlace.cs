@@ -1,34 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sorting
 {
+    // https://www.hackerrank.com/challenges/quicksort3
+    // https://www.hackerrank.com/challenges/quicksort4
     public static class QuicksortInPlace
     {
-        public static void Sort(int[] arr)
+        public static void Sort(int[] arr, ref int count)
         {
-            Sort(arr, 0, arr.Length - 1);
+            Sort(arr, 0, arr.Length - 1, ref count);
         }
 
-        private static void Sort(int[] arr, int left, int right)
+        public static void Sort(int[] arr)
+        {
+            var count = 0;
+            Sort(arr, 0, arr.Length - 1, ref count);
+        }
+
+        private static void Sort(int[] arr, int left, int right, ref int count)
         {
             if (left >= right)
             {
                 return;
             }
 
-            var p = Partition(arr, left, right);
+            var p = Partition(arr, left, right, ref count);
             Trace.WriteLine(String.Join(" ", arr));
 
-            Sort(arr, left, p - 1);
-            Sort(arr, p + 1, right);
+            Sort(arr, left, p - 1, ref count);
+            Sort(arr, p + 1, right, ref count);
         }
 
-        private static int Partition(int[] arr, int left, int right)
+        private static int Partition(int[] arr, int left, int right, ref int count)
         {
             Action<int, int> swap = (a, b) =>
             {
@@ -45,11 +49,13 @@ namespace Sorting
                 if (arr[j] < pivot)
                 {
                     swap(i, j);
+                    count++;
                     i++;
                 }
             }
 
             swap(i, right);
+            count++;
 
             return i;
         }
