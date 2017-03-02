@@ -15,7 +15,7 @@ namespace Sorting
 
             foreach (var value in arr)
             {
-                count[value-1]++;
+                count[value]++;
             }
 
             return count;
