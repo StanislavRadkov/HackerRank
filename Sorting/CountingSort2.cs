@@ -18,7 +18,18 @@ namespace Sorting
                 count[value]++;
             }
 
-            return count;
+            var result = new int[arr.Length];
+            var r = 0;
+
+            for (var i = 0; i < count.Length; i++)
+            {
+                for (var k = 0; k < count[i]; k++)
+                {
+                    result[r++] = i;
+                }
+            }
+
+            return result;
         }
     }
 }
