@@ -52,6 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CountingSort2Tests.cs" />
     <Compile Include="InsertionSortPart1Tests.cs" />
     <Compile Include="InsertionSortPart2Tests.cs" />
     <Compile Include="IntroToTutorialChallengesTests.cs" />
