@@ -43,6 +43,7 @@
     <Compile Include="CountingSort1.cs" />
     <Compile Include="CountingSort2.cs" />
     <Compile Include="CountingSort3.cs" />
+    <Compile Include="CountingSort4.cs" />
     <Compile Include="InsertionSortPart1.cs" />
     <Compile Include="InsertionSortPart2.cs" />
     <Compile Include="IntroToTutorialChallenges.cs" />
