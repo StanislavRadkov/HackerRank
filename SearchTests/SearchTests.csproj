@@ -53,6 +53,7 @@
     <Compile Include="GridlandMetroTests.cs" />
     <Compile Include="HackerlandRadioTransmittersTests.cs" />
     <Compile Include="IcecreamParlorTests.cs" />
+    <Compile Include="MissingNumbersTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

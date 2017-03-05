@@ -43,6 +43,7 @@
     <Compile Include="GridlandMetro.cs" />
     <Compile Include="HackerlandRadioTransmitters.cs" />
     <Compile Include="IcecreamParlor.cs" />
+    <Compile Include="MissingNumbers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
