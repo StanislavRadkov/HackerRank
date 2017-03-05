@@ -54,6 +54,7 @@
     <Compile Include="HackerlandRadioTransmittersTests.cs" />
     <Compile Include="IcecreamParlorTests.cs" />
     <Compile Include="MissingNumbersTests.cs" />
+    <Compile Include="PairsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
