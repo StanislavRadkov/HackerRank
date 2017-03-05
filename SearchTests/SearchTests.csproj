@@ -56,7 +56,7 @@
     <Compile Include="MissingNumbersTests.cs" />
     <Compile Include="PairsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SherlockАndArrayTests.cs" />
+    <Compile Include="SherlockAndArrayTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Search\Search.csproj">

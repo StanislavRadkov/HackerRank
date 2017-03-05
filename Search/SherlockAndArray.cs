@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Search
 {
     // https://www.hackerrank.com/challenges/sherlock-and-array
-    public class SherlockАndArray
+    public class SherlockAndArray
     {
         public static bool SumsExist(int[] input)
         {

@@ -9,20 +9,20 @@ using Search;
 namespace SearchTests
 {
     [TestClass]
-    public class SherlockАndArrayTests
+    public class SherlockAndArrayTests
     {
         [TestMethod]
         public void TestMethod1()
         {
             var input = new int[] { 1, 2, 3 };
-            Assert.AreEqual(false, SherlockАndArray.SumsExist(input));
+            Assert.AreEqual(false, SherlockAndArray.SumsExist(input));
         }
 
         [TestMethod]
         public void TestMethod2()
         {
             var input = new int[] { 1, 2, 3, 3 };
-            Assert.AreEqual(true, SherlockАndArray.SumsExist(input));
+            Assert.AreEqual(true, SherlockAndArray.SumsExist(input));
         }
     }
 }
