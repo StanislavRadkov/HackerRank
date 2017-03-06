@@ -43,6 +43,7 @@
     <Compile Include="GridlandMetro.cs" />
     <Compile Include="HackerlandRadioTransmitters.cs" />
     <Compile Include="IcecreamParlor.cs" />
+    <Compile Include="MaximumSubarraySum.cs" />
     <Compile Include="MissingNumbers.cs" />
     <Compile Include="Pairs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

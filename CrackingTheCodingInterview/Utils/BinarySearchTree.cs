@@ -53,6 +53,67 @@ namespace CrackingTheCodingInterview
             }
         }
 
+        public T GetInOrderSuccessor(T value)
+        {
+            var node = FindNode(value);
+            if (node == null)
+            {
+                throw new ArgumentException();
+            }
+
+            var successor = InOrderSuccessor(node);
+
+            if (successor != null)
+            {
+                return successor.Value;
+            }
+
+            throw new Exception("No successor!");
+        }
+
+        /* Write an algorithm to find the 'next'node (i.e., in-order successor) of a given node in 
+         * a binary search tree. Youmay assume that each nodehas a link to its parent. */
+        private BinaryTreeNode<T> InOrderSuccessor(BinaryTreeNode<T> node)
+        {
+            if (node == null)
+            {
+                return null;
+            }
+
+            if (node.Right != null)
+            {
+                return LeftMostChild(node.Right);
+            }
+            else
+            {
+                BinaryTreeNode<T> q = node;
+                BinaryTreeNode<T> x = q.Parent;
+                // Go up until we're on left instead of right
+                while (x != null && x.Left != q)
+                {
+                    q = x;
+                    x = x.Parent;
+                }
+
+                return x;
+            }
+        }
+
+        private BinaryTreeNode<T> LeftMostChild(BinaryTreeNode<T> node)
+        {
+            if (node == null)
+            {
+                return null;
+            }
+
+            while (node.Left != null)
+            {
+                node = node.Left;
+            }
+
+            return node;
+        }
+
         public BinaryTreeNode<T> FindNode(T value)
         {
             if (Root == null)
