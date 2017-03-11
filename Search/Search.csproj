@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ConnectedCellsInAGrid.cs" />
     <Compile Include="CountLuck.cs" />
+    <Compile Include="CutTheTree.cs" />
     <Compile Include="GridlandMetro.cs" />
     <Compile Include="HackerlandRadioTransmitters.cs" />
     <Compile Include="IcecreamParlor.cs" />
