@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Camelcase.cs" />
+    <Compile Include="HackerRankInAString.cs" />
     <Compile Include="RichieRich.cs" />
     <Compile Include="SuperReducedString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
