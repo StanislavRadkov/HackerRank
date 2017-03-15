@@ -40,7 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BasicSelect\WeatherObservationStation10.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation09.sql" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="BasicSelect\WeatherObservationStation11.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation12.sql" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -50,13 +54,13 @@
     <Content Include="BasicSelect\RevisingTheSelectQueryII.sql" />
     <Content Include="BasicSelect\SelectAll.sql" />
     <Content Include="BasicSelect\SelectByID.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation1.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation3.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation4.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation5.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation6.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation7.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation8.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation01.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation03.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation04.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation05.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation06.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation07.sql" />
+    <Content Include="BasicSelect\WeatherObservationStation08.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
