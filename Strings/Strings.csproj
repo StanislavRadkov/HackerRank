@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Camelcase.cs" />
+    <Compile Include="FunnyString.cs" />
     <Compile Include="HackerRankInAString.cs" />
     <Compile Include="MarsExploration.cs" />
     <Compile Include="RichieRich.cs" />
