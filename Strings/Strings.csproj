@@ -45,6 +45,7 @@
     <Compile Include="Gemstones.cs" />
     <Compile Include="HackerRankInAString.cs" />
     <Compile Include="MarsExploration.cs" />
+    <Compile Include="Pangrams.cs" />
     <Compile Include="RichieRich.cs" />
     <Compile Include="SuperReducedString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
