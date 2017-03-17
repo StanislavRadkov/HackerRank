@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlternatingCharacters.cs" />
+    <Compile Include="CaesarCipher.cs" />
     <Compile Include="Camelcase.cs" />
     <Compile Include="FunnyString.cs" />
     <Compile Include="Gemstones.cs" />
