@@ -64,6 +64,7 @@
     <Compile Include="CamelcaseTests.cs" />
     <Compile Include="RichieRichTests.cs" />
     <Compile Include="TheLoveLetterMysteryTests.cs" />
+    <Compile Include="TwoCharactersTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Strings\Strings.csproj">
