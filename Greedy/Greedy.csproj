@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GridChallenge.cs" />
     <Compile Include="MarcsCakewalk.cs" />
     <Compile Include="MinimumAbsoluteDifferenceInAnArray.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

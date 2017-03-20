@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="GridChallengeTests.cs" />
     <Compile Include="MarcsCakewalkTests.cs" />
     <Compile Include="MinimumAbsoluteDifferenceInAnArrayTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
