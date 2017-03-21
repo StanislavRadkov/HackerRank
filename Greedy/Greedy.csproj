@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GridChallenge.cs" />
+    <Compile Include="LargestPermutation.cs" />
     <Compile Include="MarcsCakewalk.cs" />
     <Compile Include="MarkAndToys.cs" />
     <Compile Include="MinimumAbsoluteDifferenceInAnArray.cs" />
