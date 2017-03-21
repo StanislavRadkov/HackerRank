@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GreedyFlorist.cs" />
     <Compile Include="GridChallenge.cs" />
     <Compile Include="LargestPermutation.cs" />
     <Compile Include="MarcsCakewalk.cs" />
