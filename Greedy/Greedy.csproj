@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="GridChallenge.cs" />
     <Compile Include="MarcsCakewalk.cs" />
+    <Compile Include="MarkAndToys.cs" />
     <Compile Include="MinimumAbsoluteDifferenceInAnArray.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
