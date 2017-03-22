@@ -43,6 +43,7 @@
     <Compile Include="AngryChildren.cs" />
     <Compile Include="GreedyFlorist.cs" />
     <Compile Include="GridChallenge.cs" />
+    <Compile Include="JimAndTheOrders.cs" />
     <Compile Include="LargestPermutation.cs" />
     <Compile Include="MarcsCakewalk.cs" />
     <Compile Include="MarkAndToys.cs" />
