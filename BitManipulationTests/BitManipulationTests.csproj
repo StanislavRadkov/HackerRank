@@ -55,6 +55,7 @@
     <Compile Include="LonelyIntegerTests.cs" />
     <Compile Include="MaximizingXORTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SansaAndXORTests.cs" />
     <Compile Include="SumvsXORTests.cs" />
     <Compile Include="CounterGameTests.cs" />
     <Compile Include="FlippingBitsTests.cs" />

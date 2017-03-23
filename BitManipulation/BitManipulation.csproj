@@ -46,6 +46,7 @@
     <Compile Include="LonelyInteger.cs" />
     <Compile Include="MaximizingXOR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SansaAndXOR.cs" />
     <Compile Include="SumvsXOR.cs" />
     <Compile Include="YetAnotherMinimaxProblem.cs" />
   </ItemGroup>
