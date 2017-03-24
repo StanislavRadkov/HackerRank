@@ -57,6 +57,7 @@
     <Compile Include="FunnyStringTests.cs" />
     <Compile Include="GemstonesTests.cs" />
     <Compile Include="HackerRankInAStringTests.cs" />
+    <Compile Include="MakingAnagramsTests.cs" />
     <Compile Include="MarsExplorationTests.cs" />
     <Compile Include="PangramsTests.cs" />
     <Compile Include="SuperReducedStringTests.cs" />
