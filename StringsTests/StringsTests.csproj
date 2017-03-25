@@ -53,6 +53,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AlternatingCharactersTests.cs" />
+    <Compile Include="AnagramTests.cs" />
     <Compile Include="CaesarCipherTests.cs" />
     <Compile Include="FunnyStringTests.cs" />
     <Compile Include="GemstonesTests.cs" />
