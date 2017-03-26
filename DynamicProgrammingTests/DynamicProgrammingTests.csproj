@@ -52,7 +52,6 @@
   <ItemGroup>
     <Compile Include="LongestIncreasingSubsequenceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TheCoinChangeProblemTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DynamicProgramming\DynamicProgramming.csproj">
