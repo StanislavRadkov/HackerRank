@@ -11,25 +11,38 @@ namespace Strings
     {
         public static bool CanBeConverted(string a)
         {
-            int[] count = new int[26];
-
-            int max = int.MinValue;
+            var dict = new Dictionary<int, int>();
+                   
             for (var i = 0; i < a.Length; i++)
             {
-                var index = a[i] - 'a';
-                count[index]++;
-                if (count[index] > max)
+                var v = a[i] - 'a';
+                if (dict.ContainsKey(v))
                 {
-                    max = count[index];
+                    dict[v]++;
+                }
+                else
+                {
+                    dict.Add(a[i] - 'a', 1);
                 }
             }
 
-            var diff = 0;
-            for (var i = 0; i < count.Length; i++)
+            var count = new Dictionary<int, int>();
+
+            foreach (var v in dict)
             {
-                if(count[i] > 0)
-                    diff += Math.Abs(max - count[i]);
+                if (count.ContainsKey(v.Value))
+                {
+                    count[v.Value]++;
+                }
+                else
+                {
+                    count.Add(v.Value, 1);
+                }
             }
+
+            var mostCommonCount = count.OrderByDescending(v => v.Value).First().Key;
+
+            var diff = dict.Values.Where(x => x != mostCommonCount).Select(x => x > mostCommonCount ? Math.Abs(x - mostCommonCount) : x).Sum();
 
             return diff <= 1;
         }
