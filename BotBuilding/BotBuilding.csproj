@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8BC96E59-6203-47A1-BE71-52F39ED87C72}</ProjectGuid>
+    <ProjectGuid>{D889EA89-E826-49F0-91F0-2FEEA8D3FCAE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SQL</RootNamespace>
-    <AssemblyName>SQL</AssemblyName>
+    <RootNamespace>BotBuilding</RootNamespace>
+    <AssemblyName>BotBuilding</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,32 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BasicSelect\MoreThan75Marks.sql" />
-    <Content Include="BasicSelect\NameOfEmployees.sql" />
-    <Content Include="BasicSelect\SalaryOfEmployees.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation10.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation09.sql" />
+    <Compile Include="BotSavesPrincess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="BasicSelect\WeatherObservationStation11.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation12.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AdvancedSelect\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="BasicSelect\JapaneseCitiesAttributes.sql" />
-    <Content Include="BasicSelect\JapaneseCitiesNames.sql" />
-    <Content Include="BasicSelect\RevisingTheSelectQueryI.sql" />
-    <Content Include="BasicSelect\RevisingTheSelectQueryII.sql" />
-    <Content Include="BasicSelect\SelectAll.sql" />
-    <Content Include="BasicSelect\SelectByID.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation01.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation03.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation04.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation05.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation06.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation07.sql" />
-    <Content Include="BasicSelect\WeatherObservationStation08.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
