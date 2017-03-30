@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BotClean.cs" />
     <Compile Include="BotSavesPrincess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
