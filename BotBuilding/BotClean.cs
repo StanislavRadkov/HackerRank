@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,11 @@ namespace BotBuilding
             Func<int> down = () => row + i < board.Length ?  row + i : board.Length - 1;
             Func<int> left = () => column - i > 0 ? column - i : 0;
             Func<int> right = () => column + i < board[row].Length ? column + i : board[row].Length -1;
-            Func<int, int, bool> isDirty = (r, c) => board[r][c] == dirt;
+            Func<int, int, bool> isDirty = (r, c) =>
+            {
+                Trace.WriteLine(String.Format("[{0}][{1}]", r, c));
+                return board[r][c] == dirt;
+            };
 
             for (i = 1; i < board.Length; i++)
             {
