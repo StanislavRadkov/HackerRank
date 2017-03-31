@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="BotCleanPartiallyObservableTests.cs" />
     <Compile Include="BotCleanStochasticTests.cs" />
     <Compile Include="BotCleanTests.cs" />
     <Compile Include="BotSavesPrincessTests.cs" />

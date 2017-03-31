@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BotClean.cs" />
+    <Compile Include="BotCleanPartiallyObservable.cs" />
     <Compile Include="BotCleanStochastic.cs" />
     <Compile Include="BotSavesPrincess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
