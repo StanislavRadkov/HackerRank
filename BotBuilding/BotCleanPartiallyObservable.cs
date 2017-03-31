@@ -22,11 +22,10 @@ namespace BotBuilding
 
             var bot = new Tuple<int, int>(row, column);
             var dirts = new List<Tuple<int, int>>();
-            var all = new List<Tuple<int, int>>();
 
-            WriteToFile(bot);
-            var visited = ReadFile();
-
+            var currentlyHidden = new List<Tuple<int, int>>();
+            var allHidden = ReadFile();
+            
             for (var r = 0; r < board.Length; r++)
             {
                 for (var c = 0; c < board[r].Length; c++)
@@ -35,21 +34,33 @@ namespace BotBuilding
                     {
                         dirts.Add(new Tuple<int, int>(r, c));
                     }
-                    else
+                    else if(board[r][c] == hidden)
                     {
-                        all.Add(new Tuple<int, int>(r, c));
+                        currentlyHidden.Add(new Tuple<int, int>(r, c));
                     }
                 }
             }
 
+            IEnumerable<Tuple<int, int>> remainingHidden;
+
+            if (allHidden.Count() == 0)
+            {
+                remainingHidden = currentlyHidden;
+            }
+            else
+            {
+                remainingHidden = allHidden.Intersect(currentlyHidden);
+            }
+            WriteToFile(remainingHidden);
+            
             var firstDirt = dirts.OrderBy(x => Math.Abs(row - x.Item1) + Math.Abs(column - x.Item2)).FirstOrDefault();
 
             if (firstDirt != null)
             {
                 return GetMove(bot, firstDirt.Item1, firstDirt.Item2);
-            }
-
-            var firstHidden = all.Except(visited).OrderBy(x => Math.Abs(row - x.Item1) + Math.Abs(column - x.Item2)).FirstOrDefault();
+            }            
+       
+            var firstHidden = remainingHidden.OrderBy(x => Math.Abs(row - x.Item1) + Math.Abs(column - x.Item2)).FirstOrDefault();
             
             if (firstHidden != null)
             {
@@ -110,16 +121,19 @@ namespace BotBuilding
             return visited;
         }
 
-        private static void WriteToFile(Tuple<int, int> cell)
+        private static void WriteToFile(IEnumerable<Tuple<int, int>> hidden)
         {
             List<Tuple<int, int>> visited = new List<Tuple<int, int>>();
 
             string fileName = "myfile.txt";
-            using (FileStream file = new FileStream(fileName, FileMode.Append, FileAccess.Write))
+            using (FileStream file = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.Write))
             {
                 using (StreamWriter sw = new StreamWriter(file))
-                {                    
-                    sw.WriteLine(String.Format($"{cell.Item1} {cell.Item2}"));
+                {
+                    foreach (var cell in hidden)
+                    {
+                        sw.WriteLine(String.Format($"{cell.Item1} {cell.Item2}"));
+                    }
                 }
             }
         }

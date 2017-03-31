@@ -62,7 +62,7 @@ namespace BotBuildingTests
             {
                 "---oo",
                 "-d-oo",
-                "ooooo",
+                "---oo",
                 "ooooo",
                 "ooooo"
             };
@@ -73,23 +73,24 @@ namespace BotBuildingTests
             {
                 "---oo",
                 "-b-oo",
-                "ooooo",
+                "---oo",
                 "ooooo",
                 "ooooo"
             };
 
-            Assert.AreEqual("LEFT", BotCleanPartiallyObservable.NextMove(1, 1, input4));
+            Assert.AreEqual("RIGHT", BotCleanPartiallyObservable.NextMove(1, 1, input4));
+
 
             var input5 = new String[]
             {
+                "ooooo",
                 "---oo",
-                "b--oo",
-                "ooooo",
-                "ooooo",
+                "-b-oo",
+                "---oo",
                 "ooooo"
             };
 
-            Assert.AreEqual("DOWN", BotCleanPartiallyObservable.NextMove(1, 0, input5));
+            Assert.AreEqual("RIGHT", BotCleanPartiallyObservable.NextMove(2, 1, input5));
         }
     }
 }
