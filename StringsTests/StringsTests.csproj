@@ -56,6 +56,7 @@
     <Compile Include="AnagramTests.cs" />
     <Compile Include="CaesarCipherTests.cs" />
     <Compile Include="FunnyStringTests.cs" />
+    <Compile Include="GameOfThronesITests.cs" />
     <Compile Include="GemstonesTests.cs" />
     <Compile Include="HackerRankInAStringTests.cs" />
     <Compile Include="MakingAnagramsTests.cs" />
